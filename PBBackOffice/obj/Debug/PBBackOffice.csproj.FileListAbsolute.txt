@@ -1,0 +1,39 @@
+H:\!year 2 work\Project Management and Development\MyProjects\PBBackOffice\bin\Debug\PBBackOffice.exe.config
+H:\!year 2 work\Project Management and Development\MyProjects\PBBackOffice\bin\Debug\PBBackOffice.exe
+H:\!year 2 work\Project Management and Development\MyProjects\PBBackOffice\bin\Debug\PBBackOffice.pdb
+H:\!year 2 work\Project Management and Development\MyProjects\PBBackOffice\obj\Debug\PBBackOffice.csprojResolveAssemblyReference.cache
+H:\!year 2 work\Project Management and Development\MyProjects\PBBackOffice\obj\Debug\PBBackOffice.Properties.Resources.resources
+H:\!year 2 work\Project Management and Development\MyProjects\PBBackOffice\obj\Debug\PBBackOffice.csproj.GenerateResource.Cache
+H:\!year 2 work\Project Management and Development\MyProjects\PBBackOffice\obj\Debug\PBBackOffice.exe
+H:\!year 2 work\Project Management and Development\MyProjects\PBBackOffice\obj\Debug\PBBackOffice.pdb
+H:\!year 2 work\Project Management and Development\MyProjects\PBBackOffice\bin\Debug\ClassLibrary.dll
+H:\!year 2 work\Project Management and Development\MyProjects\PBBackOffice\bin\Debug\ClassLibrary.pdb
+H:\!year 2 work\Project Management and Development\MyProjects\PBBackOffice\obj\Debug\PBBackOffice.frmMain.resources
+H:\!year 2 work\Project Management and Development\MyProjects\PBBackOffice\obj\Debug\PBBackOffice.mdiBackend.resources
+H:\!year 2 work\Project Management and Development\initial deliverable\MyProjects\PBBackOffice\bin\Debug\PBBackOffice.exe.config
+H:\!year 2 work\Project Management and Development\initial deliverable\MyProjects\PBBackOffice\obj\Debug\PBBackOffice.exe
+H:\!year 2 work\Project Management and Development\initial deliverable\MyProjects\PBBackOffice\obj\Debug\PBBackOffice.pdb
+H:\!year 2 work\Project Management and Development\P16153158, Al-Mansouri, Hamzah\MyProjects\PBBackOffice\bin\Debug\PBBackOffice.exe.config
+H:\!year 2 work\Project Management and Development\P16153158, Al-Mansouri, Hamzah\MyProjects\PBBackOffice\obj\Debug\PBBackOffice.exe
+H:\!year 2 work\Project Management and Development\P16153158, Al-Mansouri, Hamzah\MyProjects\PBBackOffice\obj\Debug\PBBackOffice.pdb
+H:\!year 2 work\Project Management and Development\P16153158, Al-Mansouri, Hamzah\MyProjects\PBBackOffice\bin\Debug\PBBackOffice.exe
+H:\!year 2 work\Project Management and Development\P16153158, Al-Mansouri, Hamzah\MyProjects\PBBackOffice\bin\Debug\PBBackOffice.pdb
+H:\!year 2 work\Project Management and Development\P16153158, Al-Mansouri, Hamzah\MyProjects\PBBackOffice\bin\Debug\ClassLibrary.dll
+H:\!year 2 work\Project Management and Development\P16153158, Al-Mansouri, Hamzah\MyProjects\PBBackOffice\bin\Debug\ClassLibrary.pdb
+H:\!year 2 work\Project Management and Development\P16153158, Al-Mansouri, Hamzah\MyProjects\PBBackOffice\obj\Debug\PBBackOffice.csprojResolveAssemblyReference.cache
+H:\!year 2 work\Project Management and Development\P16153158, Al-Mansouri, Hamzah\MyProjects\PBBackOffice\obj\Debug\PBBackOffice.frmMain.resources
+H:\!year 2 work\Project Management and Development\P16153158, Al-Mansouri, Hamzah\MyProjects\PBBackOffice\obj\Debug\PBBackOffice.mdiBackend.resources
+H:\!year 2 work\Project Management and Development\P16153158, Al-Mansouri, Hamzah\MyProjects\PBBackOffice\obj\Debug\PBBackOffice.Properties.Resources.resources
+H:\!year 2 work\Project Management and Development\P16153158, Al-Mansouri, Hamzah\MyProjects\PBBackOffice\obj\Debug\PBBackOffice.csproj.GenerateResource.Cache
+H:\!year 2 work\Project Management and Development\final deliverable work\MyProjects\PBBackOffice\bin\Debug\PBBackOffice.exe.config
+H:\!year 2 work\Project Management and Development\final deliverable work\MyProjects\PBBackOffice\obj\Debug\PBBackOffice.exe
+H:\!year 2 work\Project Management and Development\final deliverable work\MyProjects\PBBackOffice\obj\Debug\PBBackOffice.pdb
+H:\!year 2 work\Project Management and Development\final deliverable work\MyProjects\PBBackOffice\bin\Debug\PBBackOffice.exe
+H:\!year 2 work\Project Management and Development\final deliverable work\MyProjects\PBBackOffice\bin\Debug\PBBackOffice.pdb
+H:\!year 2 work\Project Management and Development\final deliverable work\MyProjects\PBBackOffice\bin\Debug\ClassLibrary.dll
+H:\!year 2 work\Project Management and Development\final deliverable work\MyProjects\PBBackOffice\bin\Debug\ClassLibrary.pdb
+H:\!year 2 work\Project Management and Development\final deliverable work\MyProjects\PBBackOffice\obj\Debug\PBBackOffice.csprojResolveAssemblyReference.cache
+H:\!year 2 work\Project Management and Development\final deliverable work\MyProjects\PBBackOffice\obj\Debug\PBBackOffice.frmMain.resources
+H:\!year 2 work\Project Management and Development\final deliverable work\MyProjects\PBBackOffice\obj\Debug\PBBackOffice.mdiBackend.resources
+H:\!year 2 work\Project Management and Development\final deliverable work\MyProjects\PBBackOffice\obj\Debug\PBBackOffice.Properties.Resources.resources
+H:\!year 2 work\Project Management and Development\final deliverable work\MyProjects\PBBackOffice\obj\Debug\PBBackOffice.csproj.GenerateResource.Cache

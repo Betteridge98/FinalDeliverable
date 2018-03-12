@@ -1,0 +1,9 @@
+H:\!year 2 work\Project Management and Development\final deliverable work\MyProjects\Test Framework\obj\Debug\Test Framework.csprojResolveAssemblyReference.cache
+H:\!year 2 work\Project Management and Development\final deliverable work\MyProjects\Test Framework\bin\Debug\Test Framework.dll
+H:\!year 2 work\Project Management and Development\final deliverable work\MyProjects\Test Framework\bin\Debug\Test Framework.pdb
+H:\!year 2 work\Project Management and Development\final deliverable work\MyProjects\Test Framework\bin\Debug\ClassLibrary.dll
+H:\!year 2 work\Project Management and Development\final deliverable work\MyProjects\Test Framework\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+H:\!year 2 work\Project Management and Development\final deliverable work\MyProjects\Test Framework\bin\Debug\ClassLibrary.pdb
+H:\!year 2 work\Project Management and Development\final deliverable work\MyProjects\Test Framework\obj\Debug\Test Framework.dll
+H:\!year 2 work\Project Management and Development\final deliverable work\MyProjects\Test Framework\obj\Debug\Test Framework.pdb
+H:\!year 2 work\Project Management and Development\final deliverable work\MyProjects\Test Framework\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml

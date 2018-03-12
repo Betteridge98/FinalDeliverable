@@ -1,0 +1,43 @@
+﻿body
+{
+    background-color: #FFFFFF;
+}
+
+header
+{
+    background-color: #6699FF;
+    height: 10%;
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+}
+
+footer
+{
+    background-color: #6699FF;
+    height: 10%;
+    position: fixed;
+    width: 100%;
+    top: 90%;
+    left: 0%;
+}
+
+nav
+{
+    background-color: #a661ff;
+    position: fixed;
+    width: 20%;
+    height: 90%;
+    top: 10%;
+    left: 0%;
+}
+
+article
+{
+    background-color: #0053ff;
+    position: fixed;
+    width: 80%;
+    top: 10%;
+    left: 20%;
+}
