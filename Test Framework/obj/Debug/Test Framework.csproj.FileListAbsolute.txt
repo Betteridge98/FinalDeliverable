@@ -7,3 +7,12 @@ H:\!year 2 work\Project Management and Development\final deliverable work\MyProj
 H:\!year 2 work\Project Management and Development\final deliverable work\MyProjects\Test Framework\obj\Debug\Test Framework.dll
 H:\!year 2 work\Project Management and Development\final deliverable work\MyProjects\Test Framework\obj\Debug\Test Framework.pdb
 H:\!year 2 work\Project Management and Development\final deliverable work\MyProjects\Test Framework\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\hammy\Source\Repos\FinalDeliverable\Test Framework\obj\Debug\Test Framework.csprojResolveAssemblyReference.cache
+C:\Users\hammy\Source\Repos\FinalDeliverable\Test Framework\obj\Debug\Test Framework.dll
+C:\Users\hammy\Source\Repos\FinalDeliverable\Test Framework\obj\Debug\Test Framework.pdb
+C:\Users\hammy\Source\Repos\FinalDeliverable\Test Framework\bin\Debug\Test Framework.dll
+C:\Users\hammy\Source\Repos\FinalDeliverable\Test Framework\bin\Debug\Test Framework.pdb
+C:\Users\hammy\Source\Repos\FinalDeliverable\Test Framework\bin\Debug\ClassLibrary.dll
+C:\Users\hammy\Source\Repos\FinalDeliverable\Test Framework\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\hammy\Source\Repos\FinalDeliverable\Test Framework\bin\Debug\ClassLibrary.pdb
+C:\Users\hammy\Source\Repos\FinalDeliverable\Test Framework\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml

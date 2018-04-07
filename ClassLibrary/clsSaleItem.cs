@@ -15,6 +15,7 @@ namespace ClassLibrary
         private decimal itemPrice;
         private Int32 quantity;
         private Int32 saleID;
+        private DateTime dateAdded;
         clsDataConnection myDB = new clsDataConnection();
 
         //public properties
@@ -66,6 +67,18 @@ namespace ClassLibrary
             }
         }
 
+        public DateTime DateAdded
+        {
+            get
+            {
+                return dateAdded;
+            }
+            set
+            {
+                dateAdded = value;
+            }
+        }
+
         ///public find method
         public Boolean Find(Int32 ItemID)
         {
@@ -87,6 +100,8 @@ namespace ClassLibrary
                 quantity = Convert.ToInt32(myDB.DataTable.Rows[0]["Quantity"]);
                 //private string saleID;
                 saleID = Convert.ToInt32(myDB.DataTable.Rows[0]["SaleID"]);
+                //private DateTime dateAdded
+                dateAdded = Convert.ToDateTime(myDB.DataTable.Rows[0]["DateAdded"]);
                 //return success
                 return true;
             }
@@ -112,7 +127,7 @@ namespace ClassLibrary
             }
         }
 
-        public string Valid(int itemID, decimal itemPrice, int quantity, int saleID)
+        public string Valid(int itemID, decimal itemPrice, int quantity, int saleID, DateTime DateAdded)
         {
             return "";
         }

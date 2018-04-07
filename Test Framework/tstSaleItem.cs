@@ -73,6 +73,19 @@ namespace Test_Framework
         }
 
         [TestMethod]
+        public void DateAddedPropertyOK()
+        {
+            clsSaleItem ASaleItem = new clsSaleItem();
+            //create some test data to assign to the property
+            DateTime SomeDateAdded = Convert.ToDateTime("05/04/2018");
+            //assign the data to the property
+            ASaleItem.DateAdded = SomeDateAdded;
+            //test
+            //test to see that the two values are the same
+            Assert.AreEqual(ASaleItem.DateAdded, SomeDateAdded);
+        }
+
+        [TestMethod]
         public void ValidMethodOK()
         {
             //create an instance of the class we want to create
@@ -84,8 +97,9 @@ namespace Test_Framework
             decimal ItemPrice = 1.99m;
             int Quantity = 2;
             int SaleID = 1;
+            DateTime DateAdded = Convert.ToDateTime("05/04/2018");
             //invoke the method
-            Error = ASaleItem.Valid(ItemID, ItemPrice, Quantity, SaleID);
+            Error = ASaleItem.Valid(ItemID, ItemPrice, Quantity, SaleID, DateAdded);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }

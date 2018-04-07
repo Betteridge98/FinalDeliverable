@@ -37,3 +37,15 @@ H:\!year 2 work\Project Management and Development\final deliverable work\MyProj
 H:\!year 2 work\Project Management and Development\final deliverable work\MyProjects\PBBackOffice\obj\Debug\PBBackOffice.mdiBackend.resources
 H:\!year 2 work\Project Management and Development\final deliverable work\MyProjects\PBBackOffice\obj\Debug\PBBackOffice.Properties.Resources.resources
 H:\!year 2 work\Project Management and Development\final deliverable work\MyProjects\PBBackOffice\obj\Debug\PBBackOffice.csproj.GenerateResource.Cache
+C:\Users\hammy\Source\Repos\FinalDeliverable\PBBackOffice\bin\Debug\PBBackOffice.exe.config
+C:\Users\hammy\Source\Repos\FinalDeliverable\PBBackOffice\obj\Debug\PBBackOffice.exe
+C:\Users\hammy\Source\Repos\FinalDeliverable\PBBackOffice\obj\Debug\PBBackOffice.pdb
+C:\Users\hammy\Source\Repos\FinalDeliverable\PBBackOffice\bin\Debug\PBBackOffice.exe
+C:\Users\hammy\Source\Repos\FinalDeliverable\PBBackOffice\bin\Debug\PBBackOffice.pdb
+C:\Users\hammy\Source\Repos\FinalDeliverable\PBBackOffice\bin\Debug\ClassLibrary.dll
+C:\Users\hammy\Source\Repos\FinalDeliverable\PBBackOffice\bin\Debug\ClassLibrary.pdb
+C:\Users\hammy\Source\Repos\FinalDeliverable\PBBackOffice\obj\Debug\PBBackOffice.csprojResolveAssemblyReference.cache
+C:\Users\hammy\Source\Repos\FinalDeliverable\PBBackOffice\obj\Debug\PBBackOffice.frmMain.resources
+C:\Users\hammy\Source\Repos\FinalDeliverable\PBBackOffice\obj\Debug\PBBackOffice.mdiBackend.resources
+C:\Users\hammy\Source\Repos\FinalDeliverable\PBBackOffice\obj\Debug\PBBackOffice.Properties.Resources.resources
+C:\Users\hammy\Source\Repos\FinalDeliverable\PBBackOffice\obj\Debug\PBBackOffice.csproj.GenerateResource.Cache
