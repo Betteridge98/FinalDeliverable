@@ -16,3 +16,12 @@ C:\Users\hammy\Source\Repos\FinalDeliverable\Test Framework\bin\Debug\ClassLibra
 C:\Users\hammy\Source\Repos\FinalDeliverable\Test Framework\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 C:\Users\hammy\Source\Repos\FinalDeliverable\Test Framework\bin\Debug\ClassLibrary.pdb
 C:\Users\hammy\Source\Repos\FinalDeliverable\Test Framework\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Repos\FinalDeliverable\Test Framework\bin\Debug\Test Framework.dll
+C:\Repos\FinalDeliverable\Test Framework\bin\Debug\Test Framework.pdb
+C:\Repos\FinalDeliverable\Test Framework\bin\Debug\ClassLibrary.dll
+C:\Repos\FinalDeliverable\Test Framework\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Repos\FinalDeliverable\Test Framework\bin\Debug\ClassLibrary.pdb
+C:\Repos\FinalDeliverable\Test Framework\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Repos\FinalDeliverable\Test Framework\obj\Debug\Test Framework.csprojResolveAssemblyReference.cache
+C:\Repos\FinalDeliverable\Test Framework\obj\Debug\Test Framework.dll
+C:\Repos\FinalDeliverable\Test Framework\obj\Debug\Test Framework.pdb

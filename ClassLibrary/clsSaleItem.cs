@@ -127,9 +127,78 @@ namespace ClassLibrary
             }
         }
 
-        public string Valid(int itemID, decimal itemPrice, int quantity, int saleID, DateTime DateAdded)
+        public string Valid(int itemID, decimal itemPrice, int quantity, int saleID, DateTime dateAdded)
         {
-            return "";
+            //create a string variable to store the error
+            String Error = "";
+            //if the ItemID is less than 1
+            if (itemID < 1)
+            {
+                //record the error
+                Error = Error + "The ItemID may not be less than 1";
+            }
+            //if the ItemID is more than 1000000000
+            if (itemID > 1000000000)
+            {
+                //record the error
+                Error = Error + "The ItemID may not be more than 1000000000";
+            }
+            //if the ItemPrice is less than 0
+            if (itemPrice < 0)
+            {
+                //record the error
+                Error = Error + "The ItemPrice may not be less than 0";
+            }
+            //if the ItemPrice is more than 100000
+            if (itemPrice > 100000)
+            {
+                //record the error
+                Error = Error + "The ItemPrice may not be more than 100000";
+            }
+            //if the ItemPrice has more than two decimal places
+            if (Decimal.Round(itemPrice, 2) != itemPrice)
+            {
+                //record the error
+                Error = Error + "The ItemPrice may not have more than two decimal places";
+            }
+            //if the Quantity is less than 1
+            if (quantity < 1)
+            {
+                //record the error
+                Error = Error + "The Quantity may not be less than 1";
+            }
+            //if the Quantity is more than 100
+            if (quantity > 100)
+            {
+                //record the error
+                Error = Error + "The Quantity may not be more than 100";
+            }
+            //if the SaleID is less than 1
+            if (saleID < 1)
+            {
+                //record the error
+                Error = Error + "The SaleID may not be less than 1";
+            }
+            //if the SaleID is more than 1000000000
+            if (saleID > 1000000000)
+            {
+                //record the error
+                Error = Error + "The SaleID may not be more than 1000000000";
+            }
+            //if the DateAdded is before today
+            if (dateAdded < DateTime.Now.Date)
+            {
+                //record the error
+                Error = Error + "The date can't be in the past";
+            }
+            //if the DateAdded is after today
+            if (dateAdded > DateTime.Now.Date)
+            {
+                //record the error
+                Error = Error + "The date can't be in the future";
+            }
+            //return any error messages
+            return Error;
         }
     }
 }
