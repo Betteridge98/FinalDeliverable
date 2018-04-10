@@ -200,5 +200,22 @@ namespace TheTestFrameWork
             //test to see if the result is correct 
             Assert.IsTrue(OK);
         }
+
+        [TestMethod]
+        public void FirstNameExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to assign to the property
+            string SomeFirstName = "";
+            //pad the string with characters
+            SomeFirstName = SomeFirstName.PadRight(300, 'a');
+            //invoke the method
+            OK = AStaff.Valid(SomeFirstName);
+            //test to see if that result is correct
+            Assert.IsFalse(OK);
+        }
     }
 }
