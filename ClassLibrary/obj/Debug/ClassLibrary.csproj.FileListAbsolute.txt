@@ -22,3 +22,4 @@ C:\Repos\FinalDeliverable\ClassLibrary\bin\Debug\ClassLibrary.dll
 C:\Repos\FinalDeliverable\ClassLibrary\bin\Debug\ClassLibrary.pdb
 C:\Repos\FinalDeliverable\ClassLibrary\obj\Debug\ClassLibrary.dll
 C:\Repos\FinalDeliverable\ClassLibrary\obj\Debug\ClassLibrary.pdb
+C:\Repos\FinalDeliverable\ClassLibrary\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache

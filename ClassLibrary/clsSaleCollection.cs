@@ -10,10 +10,33 @@ namespace ClassLibrary
 
     public class clsSaleCollection
     {
+        public clsSaleCollection()
+        {
+            //create an instance of the data connection
+            clsDataConnection DB = new clsDataConnection();
+            //execute the stored procedure to get a list of data
+            DB.Execute("sproc_tblSaleItem_SelectAll");
+            //get the count of records
+            Int32 RecordCount = DB.Count;
+            //set up the index for the loop
+            Int32 Index = 0;
+            //while there are records to process
+            while (Index < RecordCount)
+            {
+                //create a new instance of the saleitem class
+                clsSaleItem SaleItem = new clsSaleItem();
+                //get the saleitem ItemID
+                SaleItem.ItemID = Convert.ToInt32(DB.DataTable.Rows[Index]["ItemID"]);
+                //add the saleitem to the private data member
+                mSaleItems.Add(SaleItem);
+                //increment the index
+                Index++;
+            }
+        }
         //private data member that stores the count of records found
         private Int32 recordCount;
         //create a private list data member to store the data from the database
-        private List<clsSaleItem> saleItemList = new List<clsSaleItem>();
+        private List<clsSaleItem> mSaleItems = new List<clsSaleItem>();
         //private data members for the class
         private Int32 saleID;
         private decimal thisSale;
@@ -26,7 +49,8 @@ namespace ClassLibrary
             get
             {
                 //return record count;
-                return recordCount;
+                //return recordCount;
+                return mSaleItems.Count;
             }
             set
             {
@@ -37,11 +61,17 @@ namespace ClassLibrary
         //public list of users
         public List<clsSaleItem> SaleItems
         {
-            //getter for the property
+            //getter sends data to requesting code
             get
             {
                 //return the list of users
-                return saleItemList;
+                return mSaleItems;
+            }
+            //setter accepts data from other objects
+            set
+            {
+                //assign the incoming value to the private data member
+                mSaleItems = value;
             }
         }
 
@@ -70,6 +100,8 @@ namespace ClassLibrary
             }
         }
 
+        public List<clsSaleItem> AllSales { get; set; }
+
         public void FindAllSaleItems()
         {
             //re-set the connection
@@ -96,7 +128,7 @@ namespace ClassLibrary
                 if (SaleItemFound == true)
                 {
                     //add the user to the list
-                    saleItemList.Add(NewSaleItem);
+                    mSaleItems.Add(NewSaleItem);
                 }
                 //increment the index
                 Index++;
