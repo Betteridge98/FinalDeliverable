@@ -14,6 +14,9 @@ namespace ClassLibrary
         private Int32 recordCount;
         //create a private list data member to store the data from the database
         private List<clsSaleItem> saleItemList = new List<clsSaleItem>();
+        //private data members for the class
+        private Int32 saleID;
+        private decimal thisSale;
         //private data member to connect to the database
         private clsDataConnection myDB = new clsDataConnection();
 
@@ -25,6 +28,10 @@ namespace ClassLibrary
                 //return record count;
                 return recordCount;
             }
+            set
+            {
+
+            }
         }
 
         //public list of users
@@ -35,6 +42,31 @@ namespace ClassLibrary
             {
                 //return the list of users
                 return saleItemList;
+            }
+        }
+
+        //public properties
+        public Int32 SaleID
+        {
+            get
+            {
+                return saleID;
+            }
+            set
+            {
+                saleID = value;
+            }
+        }
+
+        public decimal ThisSale
+        {
+            get
+            {
+                return thisSale;
+            }
+            set
+            {
+                thisSale = value;
             }
         }
 
@@ -70,5 +102,7 @@ namespace ClassLibrary
                 Index++;
             }
         }
+
+
     }
 }
