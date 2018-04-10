@@ -4,6 +4,25 @@ namespace OurClassLibrary
 {
     public class clsStockCollection
     {
+        //public constructor for the class.
+        public clsStockCollection()
+        {
+            //create an instance of the stock class to store an item
+            clsStock AStock = new clsStock();
+            //set the stock to overwatch
+            AStock.ItemName = "Overwatch";
+            //add add the item to the private list of stock
+            mAllStock.Add(AStock);
+            //re initialise the Astock object to accept a new item
+            AStock = new clsStock();
+            //set the item to Call Of Duty
+            AStock.ItemName = "Call Of Duty";
+            //add the second item to the private list of stock
+            mAllStock.Add(AStock);
+            //the private list contains two items
+        }
+        
+               
         //creates a private data memeber for the AllStock list
         private List<clsStock> mAllStock = new List<clsStock>();
 
@@ -37,6 +56,7 @@ namespace OurClassLibrary
                 mAllStock = value;
             }
         }
+
 
     }
 }
