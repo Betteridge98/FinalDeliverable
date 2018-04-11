@@ -113,6 +113,22 @@ namespace TheTestFrameWork
         }
 
         [TestMethod]
+
+        public void ValidEmailOK()
+        {
+            //create an instance of the class we want to create
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the results of the validation
+            Boolean EmailOK = false;
+            //create some test data to assign to the property
+            string SomeEmail = "abcde@gmail.com";
+            //invoke the method
+            EmailOK = AStaff.Valid(SomeEmail);
+            //test to see if the result is correct
+            Assert.IsTrue(EmailOK);
+        }
+
+        [TestMethod]
         public void FirstNameMinLessOne()
         {
             //create an instance of the class we want to create 
@@ -233,5 +249,128 @@ namespace TheTestFrameWork
             //test to see if that result is correct
             Assert.IsFalse(FirstNameOK);
         }
+
+        [TestMethod]
+        public void LastNameMinLessOne()
+        {
+            //create an instance of the class we want to create 
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the validation
+            Boolean LastNameOK = false;
+            //create some test data to assign the property
+            string SomeLastName = "";
+            //invoke the method 
+            LastNameOK = AStaff.Valid(SomeLastName);
+            //test to see if the result is correct 
+            Assert.IsFalse(LastNameOK);
+        }
+
+        [TestMethod]
+        public void LastNameBoundary()
+        {
+            //create an instance of the class we want to create 
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the validation
+            Boolean LastNameOK = false;
+            //create some test data to assign the property
+            string SomeLastName = "a";
+            //invoke the method 
+            LastNameOK = AStaff.Valid(SomeLastName);
+            //test to see if the result is correct 
+            Assert.IsTrue(LastNameOK);
+        }
+
+        [TestMethod]
+        public void LastNameMinPlusOne()
+        {
+            //create an instance of the class we want to create 
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the validation
+            Boolean LastNameOK = false;
+            //create some test data to assign the property
+            string SomeLastName = "aa";
+            //invoke the method 
+            LastNameOK = AStaff.Valid(SomeLastName);
+            //test to see if the result is correct 
+            Assert.IsTrue(LastNameOK);
+        }
+
+        [TestMethod]
+        public void LastNameMaxLessOne()
+        {
+            //create an instance of the class we want to create 
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the validation
+            Boolean LastNameOK = false;
+            //create some test data to assign the property
+            string SomeLastName = "asdrgftrecgtbhnimkh";
+            //invoke the method 
+            LastNameOK = AStaff.Valid(SomeLastName);
+            //test to see if the result is correct 
+            Assert.IsTrue(LastNameOK);
+        }
+
+        [TestMethod]
+        public void LastNameMaxBoundary()
+        {
+            //create an instance of the class we want to create 
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the validation
+            Boolean LastNameOK = false;
+            //create some test data to assign the property
+            string SomeLastName = "adcbgtfsdbcthgybjkli";
+            //invoke the method 
+            LastNameOK = AStaff.Valid(SomeLastName);
+            //test to see if the result is correct 
+            Assert.IsTrue(LastNameOK);
+        }
+
+        [TestMethod]
+        public void LastNameMaxPlusOne()
+        {
+            //create an instance of the class we want to create 
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the validation
+            Boolean LastNameOK = false;
+            //create some test data to assign the property
+            string SomeLastName = "asbhytvhnihujkloiyuth";
+            //invoke the method 
+            LastNameOK = AStaff.Valid(SomeLastName);
+            //test to see if the result is correct 
+            Assert.IsFalse(LastNameOK);
+        }
+
+        [TestMethod]
+        public void LastNameMid()
+        {
+            //create an instance of the class we want to create 
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the validation
+            Boolean LastNameOK = false;
+            //create some test data to assign the property
+            string SomeLastName = "anhthyhjuk";
+            //invoke the method 
+            LastNameOK = AStaff.Valid(SomeLastName);
+            //test to see if the result is correct 
+            Assert.IsTrue(LastNameOK);
+        }
+
+        [TestMethod]
+        public void LastNameExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the validation
+            Boolean LastNameOK = false;
+            //create some test data to assign to the property
+            string SomeLastName = "";
+            //pad the string with characters
+            SomeLastName = SomeLastName.PadRight(300, 'a');
+            //invoke the method
+            LastNameOK = AStaff.Valid(SomeLastName);
+            //test to see if that result is correct
+            Assert.IsFalse(LastNameOK);
+        }
+
     }
 }

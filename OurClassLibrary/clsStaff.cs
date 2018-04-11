@@ -47,5 +47,24 @@ namespace OurClassLibrary
             }
             return OK;
         }
+
+        public bool EmailValid(string SomeEmail)
+        {
+            //boolean flag to indicate that all is OK
+            Boolean OK = true;
+            //if first name is blank
+            if (SomeEmail == "")
+            {
+                //flag an error
+                OK = false;
+            }
+            //if the first name is more than 40 characters
+            if (SomeEmail.Length > 40)
+            {
+                //flag an error
+                OK = false;
+            }
+            return OK;
+        }
     }
 }
