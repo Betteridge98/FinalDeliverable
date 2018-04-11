@@ -23,7 +23,7 @@ namespace TheTestFrameWork
             //this creates an instance of the class we want to create
             clsStockCollection AllStock = new clsStockCollection();
             //create some test data to assign the property
-            Int32 SomeCount = 72;
+            Int32 SomeCount = 4;
             //assign data to the property
             AllStock.Count = SomeCount;
             //test to see if it exists
