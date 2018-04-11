@@ -66,5 +66,32 @@ namespace Test_Framework
             //test to see that the two values are the same
             Assert.AreEqual(Sales.Count, TestList.Count);
         }
+
+        [TestMethod]
+        public void AddMethodOK()
+        {
+            //create an instance of the class we want to creeate
+            clsSaleCollection Sales = new clsSaleCollection();
+            //create the item of test data
+            clsSaleItem TestItem = new clsSaleItem();
+            //var to store the primary key
+            Int32 PrimaryKey = 1;
+            //set its properties
+            TestItem.ItemID = 1;
+            TestItem.ItemPrice = 1.99m;
+            TestItem.Quantity = 1;
+            TestItem.SaleID = 1;
+            TestItem.DateAdded = DateTime.Now.Date;
+            //set ThisSale to the testdata
+            Sales.ThisSale = TestItem;
+            //add the record
+            PrimaryKey = Sales.Add();
+            //set the primary key of the test data
+            TestItem.ItemID = PrimaryKey;
+            //find the record
+            Sales.ThisSale.Find(PrimaryKey);
+            //test to see that the two values are the same
+            Assert.AreEqual(Sales.ThisSale, TestItem);
+        }
     }
 }

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace ClassLibrary
 {
@@ -12,6 +14,10 @@ namespace ClassLibrary
     {
         public clsSaleCollection()
         {
+            //private data member for the list
+            List<clsSaleItem> mSaleItem = new List<clsSaleItem>();
+            //private data member thisSale
+            clsSaleItem mThisSale = new clsSaleItem();
             //create an instance of the data connection
             clsDataConnection DB = new clsDataConnection();
             //execute the stored procedure to get a list of data
@@ -39,7 +45,7 @@ namespace ClassLibrary
         private List<clsSaleItem> mSaleItems = new List<clsSaleItem>();
         //private data members for the class
         private Int32 saleID;
-        private decimal thisSale;
+        private clsSaleItem mThisSale;
         //private data member to connect to the database
         private clsDataConnection myDB = new clsDataConnection();
 
@@ -88,15 +94,15 @@ namespace ClassLibrary
             }
         }
 
-        public decimal ThisSale
+        public clsSaleItem ThisSale
         {
             get
             {
-                return thisSale;
+                return mThisSale;
             }
             set
             {
-                thisSale = value;
+                mThisSale = value;
             }
         }
 
@@ -133,6 +139,21 @@ namespace ClassLibrary
                 //increment the index
                 Index++;
             }
+        }
+
+        public int Add()
+        {
+            //adds a new record to the database based on the values of mThisSale
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored procedure
+            DB.AddParameter("@ItemID", mThisSale.ItemID);
+            DB.AddParameter("@ItemPrice", mThisSale.ItemPrice);
+            DB.AddParameter("@Quantity", mThisSale.Quantity);
+            DB.AddParameter("@SaleID", mThisSale.SaleID);
+            DB.AddParameter("@DateAdded", mThisSale.DateAdded);
+            //execute the query returning the primary key value
+            return DB.Execute("sproc_tblSaleItem_Insert");
         }
 
 
