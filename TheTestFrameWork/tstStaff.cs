@@ -372,5 +372,112 @@ namespace TheTestFrameWork
             Assert.IsFalse(LastNameOK);
         }
 
+        [TestMethod]
+        public void EmailMinLessOne()
+        {
+            //create an instance of the class we want to create 
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the validation
+            Boolean EmailOK = false;
+            //create some test data to assign the property
+            string SomeEmail = "";
+            //invoke the method 
+            EmailOK = AStaff.EmailValid(SomeEmail);
+            //test to see if the result is correct 
+            Assert.IsFalse(EmailOK);
+        }
+
+
+        [TestMethod]
+        public void EmailBoundary()
+        {
+            //create an instance of the class we want to create 
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the validation
+            Boolean EmailOK = false;
+            //create some test data to assign the property
+            string SomeEmail = "a";
+            //invoke the method 
+            EmailOK = AStaff.EmailValid(SomeEmail);
+            //test to see if the result is correct 
+            Assert.IsTrue(EmailOK);
+        }
+
+        [TestMethod]
+        public void EmailMinPlusOne()
+        {
+            //create an instance of the class we want to create 
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the validation
+            Boolean EmailOK = false;
+            //create some test data to assign the property
+            string SomeEmail = "aa";
+            //invoke the method 
+            EmailOK = AStaff.EmailValid(SomeEmail);
+            //test to see if the result is correct 
+            Assert.IsTrue(EmailOK);
+        }
+
+        [TestMethod]
+        public void EmailMaxLessOne()
+        {
+            //create an instance of the class we want to create 
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the validation
+            Boolean EmailOK = false;
+            //create some test data to assign the property
+            string SomeEmail = "asdrgftrecgtbhnimkh";
+            //invoke the method 
+            EmailOK = AStaff.EmailValid(SomeEmail);
+            //test to see if the result is correct 
+            Assert.IsTrue(EmailOK);
+        }
+
+        [TestMethod]
+        public void EmailMaxBoundary()
+        {
+            //create an instance of the class we want to create 
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the validation
+            Boolean EmailOK = false;
+            //create some test data to assign the property
+            string SomeEmail = "adcbgtfsdbcthgybjkli";
+            //invoke the method 
+            EmailOK = AStaff.EmailValid(SomeEmail);
+            //test to see if the result is correct 
+            Assert.IsTrue(EmailOK);
+        }
+
+        [TestMethod]
+        public void EmailMaxPlusOne()
+        {
+            //create an instance of the class we want to create 
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the validation
+            Boolean EmailOK = false;
+            //create some test data to assign the property
+            string SomeEmail = "asbhytvhnihujkloiyuth";
+            //invoke the method 
+            EmailOK = AStaff.EmailValid(SomeEmail);
+            //test to see if the result is correct 
+            Assert.IsFalse(EmailOK);
+        }
+
+        [TestMethod]
+        public void EmailMid()
+        {
+            //create an instance of the class we want to create 
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the validation
+            Boolean EmailOK = false;
+            //create some test data to assign the property
+            string SomeEmail = "anhthyhjuk";
+            //invoke the method 
+            EmailOK = AStaff.EmailValid(SomeEmail);
+            //test to see if the result is correct 
+            Assert.IsTrue(EmailOK);
+        }
+
+
     }
 }
