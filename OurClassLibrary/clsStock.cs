@@ -67,5 +67,25 @@ namespace OurClassLibrary
             }
             return OK;
         }
+
+        public bool ConditionValid(string SomeCondition)
+        {
+            //boolean flag to indicate all is okay
+            Boolean OK = true;
+            //if the name of the item is blank, then its false
+            if (SomeCondition == "")
+            {
+                //flag an error
+                OK = false;
+            }
+            //if the name of the item is more than 50 characters
+            if (SomeCondition.Length > 10)
+            {
+                //flag an error
+                OK = false;
+            }
+            return OK;
+        }
+
     }
 }

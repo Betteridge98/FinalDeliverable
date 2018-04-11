@@ -141,6 +141,21 @@ namespace TheTestFrameWork
             Assert.IsTrue(AgeRateOK);
         }
 
+        [TestMethod]
+        public void ValidConditionOK()
+        {
+            //create an instance of the Method we want to create
+            clsStock TheStock = new clsStock();
+            //boolean variable to store the result of the validation
+            Boolean ConditionOK = false;
+            //create some test data to assign to the property
+            string SomeCondition = "Good";
+            //invoke the method
+            ConditionOK = TheStock.Valid(SomeCondition);
+            //test to see that the result is correct
+            Assert.IsTrue(ConditionOK);
+        }
+
         //
         [TestMethod]
         public void ItemNameMinLessOne()
@@ -505,6 +520,129 @@ namespace TheTestFrameWork
             AgeOK = TheStock.AgeRatingValid(SomeAge);
             //test to see that the result is correct
             Assert.IsFalse(AgeOK);
+        }
+
+        [TestMethod]
+        public void ConditionMinLessOne()
+        {
+            //create an instance of the Method we want to create
+            clsStock TheStock = new clsStock();
+            //boolean variable to store the result of the validation
+            Boolean CondtionOK = false;
+            //create some test data to assign to the property
+            string SomeCondition = "";
+            //invoke the method
+            CondtionOK = TheStock.ConditionValid(SomeCondition);
+            //test to see that the result is correct
+            Assert.IsFalse(CondtionOK);
+        }
+
+        [TestMethod]
+        public void ConditionMinBoundary()
+        {
+            //create an instance of the Method we want to create
+            clsStock TheStock = new clsStock();
+            //boolean variable to store the result of the validation
+            Boolean CondtionOK = false;
+            //create some test data to assign to the property
+            string SomeCondition = "a";
+            //invoke the method
+            CondtionOK = TheStock.ConditionValid(SomeCondition);
+            //test to see that the result is correct
+            Assert.IsTrue(CondtionOK);
+        }
+
+        [TestMethod]
+        public void ConditionMinPlusOne()
+        {
+            //create an instance of the Method we want to create
+            clsStock TheStock = new clsStock();
+            //boolean variable to store the result of the validation
+            Boolean CondtionOK = false;
+            //create some test data to assign to the property
+            string SomeCondition = "aa";
+            //invoke the method
+            CondtionOK = TheStock.ConditionValid(SomeCondition);
+            //test to see that the result is correct
+            Assert.IsTrue(CondtionOK);
+        }
+
+        [TestMethod]
+        public void ConditionMiddle()
+        {
+            //create an instance of the Method we want to create
+            clsStock TheStock = new clsStock();
+            //boolean variable to store the result of the validation
+            Boolean CondtionOK = false;
+            //create some test data to assign to the property
+            string SomeCondition = "qwert";
+            //invoke the method
+            CondtionOK = TheStock.ConditionValid(SomeCondition);
+            //test to see that the result is correct
+            Assert.IsTrue(CondtionOK);
+        }
+
+        [TestMethod]
+        public void ConditionMaxLessOne()
+        {
+            //create an instance of the Method we want to create
+            clsStock TheStock = new clsStock();
+            //boolean variable to store the result of the validation
+            Boolean CondtionOK = false;
+            //create some test data to assign to the property
+            string SomeCondition = "qwertyuio";
+            //invoke the method
+            CondtionOK = TheStock.ConditionValid(SomeCondition);
+            //test to see that the result is correct
+            Assert.IsTrue(CondtionOK);
+        }
+
+        [TestMethod]
+        public void ConditionMaxBoundary()
+        {
+            //create an instance of the Method we want to create
+            clsStock TheStock = new clsStock();
+            //boolean variable to store the result of the validation
+            Boolean CondtionOK = false;
+            //create some test data to assign to the property
+            string SomeCondition = "qwertyuiop";
+            //invoke the method
+            CondtionOK = TheStock.ConditionValid(SomeCondition);
+            //test to see that the result is correct
+            Assert.IsTrue(CondtionOK);
+        }
+
+        [TestMethod]
+        public void ConditionMaxPlusOne()
+        {
+            //create an instance of the Method we want to create
+            clsStock TheStock = new clsStock();
+            //boolean variable to store the result of the validation
+            Boolean CondtionOK = false;
+            //create some test data to assign to the property
+            string SomeCondition = "qwertyuiopa";
+            //invoke the method
+            CondtionOK = TheStock.ConditionValid(SomeCondition);
+            //test to see that the result is correct
+            Assert.IsFalse(CondtionOK);
+        }
+
+        [TestMethod]
+        public void ConditionExtremeMax()
+        {
+            //create an instance of the Method we want to create
+            clsStock TheStock = new clsStock();
+            //boolean variable to store the result of the validation
+            Boolean CondtionOK = false;
+            //create some test data to assign to the property
+            string SomeCondition = "";
+            //pad thew string with a characters
+            SomeCondition = SomeCondition.PadRight(500, 'a');
+            //invoke the method
+            CondtionOK = TheStock.ConditionValid(SomeCondition);
+            //test to see that the result is correct
+            Assert.IsFalse(CondtionOK);
+
         }
 
     }
