@@ -137,7 +137,7 @@ namespace TheTestFrameWork
             //boolean variable to store the results of the validation
             Boolean PhoneNoOK = false;
             //create some test data to assign to the property
-            Int32 SomePhoneNo = 07440195818;
+            String SomePhoneNo = "1";
             //invoke the method
             PhoneNoOK = AStaff.PhoneNoValid(SomePhoneNo);
             //test to see if the result is correct
@@ -510,5 +510,112 @@ namespace TheTestFrameWork
             //test to see if that result is correct
             Assert.IsFalse(EmailOK);
         }
+
+        [TestMethod]
+        public void PhoneNoMinLessOne()
+        {
+            //create an instance of the class we want to create 
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the validation
+            Boolean PhoneNoOK = false;
+            //create some test data to assign the property
+            string SomePhoneNo = "";
+            //invoke the method 
+            PhoneNoOK = AStaff.PhoneNoValid(SomePhoneNo);
+            //test to see if the result is correct 
+            Assert.IsFalse(PhoneNoOK);
+        }
+
+        [TestMethod]
+        public void PhoneNoBoundary()
+        {
+            //create an instance of the class we want to create 
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the validation
+            Boolean PhoneNoOK = false;
+            //create some test data to assign the property
+            string SomePhoneNo = "1";
+            //invoke the method 
+            PhoneNoOK = AStaff.PhoneNoValid(SomePhoneNo);
+            //test to see if the result is correct 
+            Assert.IsTrue(PhoneNoOK);
+        }
+
+        [TestMethod]
+        public void PhoneNoMinPlusOne()
+        {
+            //create an instance of the class we want to create 
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the validation
+            Boolean PhoneNoOK = false;
+            //create some test data to assign the property
+            string SomePhoneNo = "12";
+            //invoke the method 
+            PhoneNoOK = AStaff.PhoneNoValid(SomePhoneNo);
+            //test to see if the result is correct 
+            Assert.IsTrue(PhoneNoOK);
+        }
+
+        [TestMethod]
+        public void PhoneNoMaxLessOne()
+        {
+            //create an instance of the class we want to create 
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the validation
+            Boolean PhoneNoOK = false;
+            //create some test data to assign the property
+            string SomePhoneNo = "12345678912345";
+            //invoke the method 
+            PhoneNoOK = AStaff.PhoneNoValid(SomePhoneNo);
+            //test to see if the result is correct 
+            Assert.IsTrue(PhoneNoOK);
+        }
+
+        [TestMethod]
+        public void PhoneNoMaxBoundary()
+        {
+            //create an instance of the class we want to create 
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the validation
+            Boolean PhoneNoOK = false;
+            //create some test data to assign the property
+            string SomePhoneNo = "123456789123456";
+            //invoke the method 
+            PhoneNoOK = AStaff.EmailValid(SomePhoneNo);
+            //test to see if the result is correct 
+            Assert.IsTrue(PhoneNoOK);
+        }
+
+        [TestMethod]
+        public void PhoneNoMaxPlusOne()
+        {
+            //create an instance of the class we want to create 
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the validation
+            Boolean PhoneNoOK = false;
+            //create some test data to assign the property
+            string SomePhoneNo = "1234567891234567";
+            //invoke the method 
+            PhoneNoOK = AStaff.EmailValid(SomePhoneNo);
+            //test to see if the result is correct 
+            Assert.IsFalse(PhoneNoOK);
+        }
+
+        [TestMethod]
+        public void PhoneNoMid()
+        {
+            //create an instance of the class we want to create 
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the validation
+            Boolean PhoneNoOK = false;
+            //create some test data to assign the property
+            string SomePhoneNo = "1234567";
+            //invoke the method 
+            PhoneNoOK = AStaff.PhoneNoValid(SomePhoneNo);
+            //test to see if the result is correct 
+            Assert.IsTrue(PhoneNoOK);
+        }
+
+
     }
 }
