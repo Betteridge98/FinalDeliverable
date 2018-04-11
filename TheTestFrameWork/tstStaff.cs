@@ -426,7 +426,7 @@ namespace TheTestFrameWork
             //boolean variable to store the result of the validation
             Boolean EmailOK = false;
             //create some test data to assign the property
-            string SomeEmail = "asdrgftrecgtbhnimkh";
+            string SomeEmail = "asghnchyghbhnchjkloithgfdtsuchnjuhytgst";
             //invoke the method 
             EmailOK = AStaff.EmailValid(SomeEmail);
             //test to see if the result is correct 
@@ -441,7 +441,7 @@ namespace TheTestFrameWork
             //boolean variable to store the result of the validation
             Boolean EmailOK = false;
             //create some test data to assign the property
-            string SomeEmail = "adcbgtfsdbcthgybjkli";
+            string SomeEmail = "asghnchyghbhnchjkloithgfdtsuchnjuhytgstg";
             //invoke the method 
             EmailOK = AStaff.EmailValid(SomeEmail);
             //test to see if the result is correct 
@@ -456,7 +456,7 @@ namespace TheTestFrameWork
             //boolean variable to store the result of the validation
             Boolean EmailOK = false;
             //create some test data to assign the property
-            string SomeEmail = "asbhytvhnihujkloiyuth";
+            string SomeEmail = "asghnchyghbhnchjkloithgfdtsuchnjuhytgstgg";
             //invoke the method 
             EmailOK = AStaff.EmailValid(SomeEmail);
             //test to see if the result is correct 
@@ -471,13 +471,28 @@ namespace TheTestFrameWork
             //boolean variable to store the result of the validation
             Boolean EmailOK = false;
             //create some test data to assign the property
-            string SomeEmail = "anhthyhjuk";
+            string SomeEmail = "ahsytghdnvjkiuthjghy";
             //invoke the method 
             EmailOK = AStaff.EmailValid(SomeEmail);
             //test to see if the result is correct 
             Assert.IsTrue(EmailOK);
         }
 
-
+        [TestMethod]
+        public void EmailExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the validation
+            Boolean EmailOK = false;
+            //create some test data to assign to the property
+            string SomeEmail = "";
+            //pad the string with characters
+            SomeEmail = SomeEmail.PadRight(300, 'a');
+            //invoke the method
+            EmailOK = AStaff.LastNameValid(SomeEmail);
+            //test to see if that result is correct
+            Assert.IsFalse(EmailOK);
+        }
     }
 }
