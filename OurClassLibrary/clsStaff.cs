@@ -66,5 +66,10 @@ namespace OurClassLibrary
             }
             return OK;
         }
+
+        public bool PhoneNoValid(string somePhoneNo)
+        {
+            
+        }
     }
 }

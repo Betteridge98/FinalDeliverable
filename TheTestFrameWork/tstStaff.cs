@@ -129,6 +129,22 @@ namespace TheTestFrameWork
         }
 
         [TestMethod]
+
+        public void PhoneNoOK()
+        {
+            //create an instance of the class we want to create
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the results of the validation
+            Boolean PhoneNoOK = false;
+            //create some test data to assign to the property
+            string SomePhoneNo = "abcde@gmail.com";
+            //invoke the method
+            PhoneNoOK = AStaff.PhoneNoValid(SomePhoneNo);
+            //test to see if the result is correct
+            Assert.IsTrue(PhoneNoOK);
+        }
+
+        [TestMethod]
         public void FirstNameMinLessOne()
         {
             //create an instance of the class we want to create 
