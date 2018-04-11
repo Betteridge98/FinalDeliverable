@@ -23,7 +23,7 @@ namespace TheTestFrameWork
             //this creates an instance of the class we want to create
             clsStockCollection AllStock = new clsStockCollection();
             //create some test data to assign the property
-            Int32 SomeCount = 2;
+            Int32 SomeCount = 72;
             //assign data to the property
             AllStock.Count = SomeCount;
             //test to see if it exists
@@ -56,14 +56,14 @@ namespace TheTestFrameWork
             Assert.AreEqual(Stock.Count, TestStockList.Count);
         }
 
-        [TestMethod]
-        public void TwoStockItemsPresent()
-        {
-            //this creates an instance of the class we want to create
-            clsStockCollection AllStock = new clsStockCollection();
-            //test to see if the values are the same
-            Assert.AreEqual(AllStock.Count, 2);
-        }
+        //[TestMethod]
+        //public void TwoStockItemsPresent()
+        //{
+        //    //this creates an instance of the class we want to create
+        //    clsStockCollection AllStock = new clsStockCollection();
+        //    //test to see if the values are the same
+        //    Assert.AreEqual(AllStock.Count, 2);
+        //}
 
     }
 }
