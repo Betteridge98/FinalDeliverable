@@ -118,13 +118,13 @@ namespace TheTestFrameWork
             //create an instance of the class we want to create 
             clsStaff AStaff = new clsStaff();
             //boolean variable to store the result of the validation
-            Boolean OK = false;
+            Boolean FirstNameOK = false;
             //create some test data to assign the property
             string SomeFirstName = "";
             //invoke the method 
-            OK = AStaff.Valid(SomeFirstName);
+            FirstNameOK = AStaff.Valid(SomeFirstName);
             //test to see if the result is correct 
-            Assert.IsFalse(OK);
+            Assert.IsFalse(FirstNameOK);
         }
 
         [TestMethod]
@@ -133,13 +133,13 @@ namespace TheTestFrameWork
             //create an instance of the class we want to create 
             clsStaff AStaff = new clsStaff();
             //boolean variable to store the result of the validation
-            Boolean OK = false;
+            Boolean FirstNameOK = false;
             //create some test data to assign the property
             string SomeFirstName = "a";
             //invoke the method 
-            OK = AStaff.Valid(SomeFirstName);
+            FirstNameOK = AStaff.Valid(SomeFirstName);
             //test to see if the result is correct 
-            Assert.IsTrue(OK);
+            Assert.IsTrue(FirstNameOK);
         }
 
         [TestMethod]
@@ -148,13 +148,13 @@ namespace TheTestFrameWork
             //create an instance of the class we want to create 
             clsStaff AStaff = new clsStaff();
             //boolean variable to store the result of the validation
-            Boolean OK = false;
+            Boolean FirstNameOK = false;
             //create some test data to assign the property
             string SomeFirstName = "aa";
             //invoke the method 
-            OK = AStaff.Valid(SomeFirstName);
+            FirstNameOK = AStaff.Valid(SomeFirstName);
             //test to see if the result is correct 
-            Assert.IsTrue(OK);
+            Assert.IsTrue(FirstNameOK);
         }
 
         [TestMethod]
@@ -163,13 +163,13 @@ namespace TheTestFrameWork
             //create an instance of the class we want to create 
             clsStaff AStaff = new clsStaff();
             //boolean variable to store the result of the validation
-            Boolean OK = false;
+            Boolean FirstNameOK = false;
             //create some test data to assign the property
             string SomeFirstName = "asdrgftrecgtbhnimkh";
             //invoke the method 
-            OK = AStaff.Valid(SomeFirstName);
+            FirstNameOK = AStaff.Valid(SomeFirstName);
             //test to see if the result is correct 
-            Assert.IsTrue(OK);
+            Assert.IsTrue(FirstNameOK);
         }
 
         [TestMethod]
@@ -178,13 +178,13 @@ namespace TheTestFrameWork
             //create an instance of the class we want to create 
             clsStaff AStaff = new clsStaff();
             //boolean variable to store the result of the validation
-            Boolean OK = false;
+            Boolean FirstNameOK = false;
             //create some test data to assign the property
             string SomeFirstName = "adcbgtfsdbcthgybjkli";
             //invoke the method 
-            OK = AStaff.Valid(SomeFirstName);
+            FirstNameOK = AStaff.Valid(SomeFirstName);
             //test to see if the result is correct 
-            Assert.IsTrue(OK);
+            Assert.IsTrue(FirstNameOK);
         }
 
         [TestMethod]
@@ -193,13 +193,13 @@ namespace TheTestFrameWork
             //create an instance of the class we want to create 
             clsStaff AStaff = new clsStaff();
             //boolean variable to store the result of the validation
-            Boolean OK = false;
+            Boolean FirstNameOK = false;
             //create some test data to assign the property
             string SomeFirstName = "asbhytvhnihujkloiyuth";
             //invoke the method 
-            OK = AStaff.Valid(SomeFirstName);
+            FirstNameOK = AStaff.Valid(SomeFirstName);
             //test to see if the result is correct 
-            Assert.IsFalse(OK);
+            Assert.IsFalse(FirstNameOK);
         }
 
         [TestMethod]
@@ -208,13 +208,13 @@ namespace TheTestFrameWork
             //create an instance of the class we want to create 
             clsStaff AStaff = new clsStaff();
             //boolean variable to store the result of the validation
-            Boolean OK = false;
+            Boolean FirstNameOK = false;
             //create some test data to assign the property
             string SomeFirstName = "anhthyhjuk";
             //invoke the method 
-            OK = AStaff.Valid(SomeFirstName);
+            FirstNameOK = AStaff.Valid(SomeFirstName);
             //test to see if the result is correct 
-            Assert.IsTrue(OK);
+            Assert.IsTrue(FirstNameOK);
         }
 
         [TestMethod]
@@ -223,15 +223,15 @@ namespace TheTestFrameWork
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //boolean variable to store the result of the validation
-            Boolean OK = false;
+            Boolean FirstNameOK = false;
             //create some test data to assign to the property
             string SomeFirstName = "";
             //pad the string with characters
             SomeFirstName = SomeFirstName.PadRight(300, 'a');
             //invoke the method
-            OK = AStaff.Valid(SomeFirstName);
+            FirstNameOK = AStaff.Valid(SomeFirstName);
             //test to see if that result is correct
-            Assert.IsFalse(OK);
+            Assert.IsFalse(FirstNameOK);
         }
     }
 }
