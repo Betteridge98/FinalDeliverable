@@ -77,7 +77,7 @@ namespace OurClassLibrary
                 //flag an error
                 OK = false;
             }
-            //if the first name is more than 40 characters
+            //if the first name is more than 14 characters
             if (SomePhoneNo.Length > 14)
             {
                 //flag an error

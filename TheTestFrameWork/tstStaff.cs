@@ -564,7 +564,7 @@ namespace TheTestFrameWork
             //boolean variable to store the result of the validation
             Boolean PhoneNoOK = false;
             //create some test data to assign the property
-            string SomePhoneNo = "12345678912345";
+            string SomePhoneNo = "1234567891234";
             //invoke the method 
             PhoneNoOK = AStaff.PhoneNoValid(SomePhoneNo);
             //test to see if the result is correct 
@@ -579,7 +579,7 @@ namespace TheTestFrameWork
             //boolean variable to store the result of the validation
             Boolean PhoneNoOK = false;
             //create some test data to assign the property
-            string SomePhoneNo = "123456789123456";
+            string SomePhoneNo = "12345678912345";
             //invoke the method 
             PhoneNoOK = AStaff.EmailValid(SomePhoneNo);
             //test to see if the result is correct 
@@ -594,9 +594,9 @@ namespace TheTestFrameWork
             //boolean variable to store the result of the validation
             Boolean PhoneNoOK = false;
             //create some test data to assign the property
-            string SomePhoneNo = "1234567891234567";
+            string SomePhoneNo = "123456789123456";
             //invoke the method 
-            PhoneNoOK = AStaff.EmailValid(SomePhoneNo);
+            PhoneNoOK = AStaff.PhoneNoValid(SomePhoneNo);
             //test to see if the result is correct 
             Assert.IsFalse(PhoneNoOK);
         }
@@ -616,6 +616,21 @@ namespace TheTestFrameWork
             Assert.IsTrue(PhoneNoOK);
         }
 
-
+        [TestMethod]
+        public void PhoneNoExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the result of the validation
+            Boolean PhoneNoOK = false;
+            //create some test data to assign to the property
+            string SomePhoneNo = "";
+            //pad the string with characters
+            SomePhoneNo = SomePhoneNo.PadRight(300, '1');
+            //invoke the method
+            PhoneNoOK = AStaff.LastNameValid(SomePhoneNo);
+            //test to see if that result is correct
+            Assert.IsFalse(PhoneNoOK);
+        }
     }
 }
