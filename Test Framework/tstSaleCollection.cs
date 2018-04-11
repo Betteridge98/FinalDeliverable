@@ -18,19 +18,6 @@ namespace Test_Framework
         }
 
         [TestMethod]
-        public void CountPropertyOK()
-        {
-            //create an instance of the class we want to create
-            clsSaleCollection SaleItems = new clsSaleCollection();
-            //create some test data to assign to the property
-            Int32 SomeCount = 2;
-            //assign the data to the property
-            SaleItems.Count = SomeCount;
-            //test to see that the two values are the same
-            Assert.AreEqual(SaleItems.Count, SomeCount);
-        }
-
-        [TestMethod]
         public void SaleItemsOK()
         {
             //create an instance of the class we want to creeate
@@ -79,14 +66,5 @@ namespace Test_Framework
             //test to see that the two values are the same
             Assert.AreEqual(Sales.Count, TestList.Count);
         }
-
-        //[TestMethod]
-        //public void TwoSalesPresent()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsSaleCollection Sales = new clsSaleCollection();
-        //    //test to see that the two values are the same
-        //    Assert.AreEqual(Sales.Count, 2);
-        //}
     }
 }

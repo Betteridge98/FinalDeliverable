@@ -8,9 +8,15 @@ using ClassLibrary;//add your namespace here
 
 public partial class _Default : System.Web.UI.Page
 {
+    //this function handles the load event for the page
     protected void Page_Load(object sender, EventArgs e)
     {
-        
+        //if this is the first time the page is displayed
+        if (IsPostBack == false)
+        {
+            //update the list box
+            DisplaySaleItems();
+        }
     }
 
     protected void btnPopulate_Click(object sender, EventArgs e)
