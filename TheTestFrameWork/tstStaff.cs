@@ -82,19 +82,37 @@ namespace TheTestFrameWork
         }
 
         [TestMethod]
-        public void ValidMethodOK()
+        public void ValidFirstNameOK()
         {
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //boolean variable to store the results of the validation
-            Boolean OK = false;
+            Boolean FirstNameOK = false;
             //create some test data to assign to the property
             string SomeFirstName = "Sam";
             //invoke the method
-            OK = AStaff.Valid(SomeFirstName);
+            FirstNameOK = AStaff.Valid(SomeFirstName);
             //test to see if the result is correct
-            Assert.IsTrue(OK);
+            Assert.IsTrue(FirstNameOK);
         }
+
+        [TestMethod]
+
+        public void ValidLastNameOK()
+        {
+            //create an instance of the class we want to create
+            clsStaff AStaff = new clsStaff();
+            //boolean variable to store the results of the validation
+            Boolean LastNameOK = false;
+            //create some test data to assign to the property
+            string SomeLastName = "Betteridge";
+            //invoke the method
+            LastNameOK = AStaff.Valid(SomeLastName);
+            //test to see if the result is correct
+            Assert.IsTrue(LastNameOK);
+        }
+
+
 
         [TestMethod]
         public void FirstNameMinLessOne()
