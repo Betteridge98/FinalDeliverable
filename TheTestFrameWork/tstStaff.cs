@@ -130,14 +130,14 @@ namespace TheTestFrameWork
 
         [TestMethod]
 
-        public void PhoneNoOK()
+        public void ValidPhoneNoOK()
         {
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
             //boolean variable to store the results of the validation
             Boolean PhoneNoOK = false;
             //create some test data to assign to the property
-            string SomePhoneNo = "abcde@gmail.com";
+            Int32 SomePhoneNo = 07440195818;
             //invoke the method
             PhoneNoOK = AStaff.PhoneNoValid(SomePhoneNo);
             //test to see if the result is correct

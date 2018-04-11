@@ -67,9 +67,23 @@ namespace OurClassLibrary
             return OK;
         }
 
-        public bool PhoneNoValid(string somePhoneNo)
+        public bool PhoneNoValid(Int32 SomePhoneNo)
         {
-            
+            //boolean flag to indicate that all is OK
+            Boolean OK = true;
+            //if first name is blank
+            if (SomePhoneNo < 1)
+            {
+                //flag an error
+                OK = false;
+            }
+            //if the first name is more than 40 characters
+            if (SomePhoneNo > 14)
+            {
+                //flag an error
+                OK = false;
+            }
+            return OK;
         }
     }
 }
