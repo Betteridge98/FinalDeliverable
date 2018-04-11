@@ -107,7 +107,7 @@ namespace TheTestFrameWork
             //create some test data to assign to the property
             string SomeLastName = "Betteridge";
             //invoke the method
-            LastNameOK = AStaff.Valid(SomeLastName);
+            LastNameOK = AStaff.LastNameValid(SomeLastName);
             //test to see if the result is correct
             Assert.IsTrue(LastNameOK);
         }
@@ -123,7 +123,7 @@ namespace TheTestFrameWork
             //create some test data to assign to the property
             string SomeEmail = "abcde@gmail.com";
             //invoke the method
-            EmailOK = AStaff.Valid(SomeEmail);
+            EmailOK = AStaff.EmailValid(SomeEmail);
             //test to see if the result is correct
             Assert.IsTrue(EmailOK);
         }
@@ -260,7 +260,7 @@ namespace TheTestFrameWork
             //create some test data to assign the property
             string SomeLastName = "";
             //invoke the method 
-            LastNameOK = AStaff.Valid(SomeLastName);
+            LastNameOK = AStaff.LastNameValid(SomeLastName);
             //test to see if the result is correct 
             Assert.IsFalse(LastNameOK);
         }
@@ -275,7 +275,7 @@ namespace TheTestFrameWork
             //create some test data to assign the property
             string SomeLastName = "a";
             //invoke the method 
-            LastNameOK = AStaff.Valid(SomeLastName);
+            LastNameOK = AStaff.LastNameValid(SomeLastName);
             //test to see if the result is correct 
             Assert.IsTrue(LastNameOK);
         }
@@ -290,7 +290,7 @@ namespace TheTestFrameWork
             //create some test data to assign the property
             string SomeLastName = "aa";
             //invoke the method 
-            LastNameOK = AStaff.Valid(SomeLastName);
+            LastNameOK = AStaff.LastNameValid(SomeLastName);
             //test to see if the result is correct 
             Assert.IsTrue(LastNameOK);
         }
@@ -305,7 +305,7 @@ namespace TheTestFrameWork
             //create some test data to assign the property
             string SomeLastName = "asdrgftrecgtbhnimkh";
             //invoke the method 
-            LastNameOK = AStaff.Valid(SomeLastName);
+            LastNameOK = AStaff.LastNameValid(SomeLastName);
             //test to see if the result is correct 
             Assert.IsTrue(LastNameOK);
         }
@@ -320,7 +320,7 @@ namespace TheTestFrameWork
             //create some test data to assign the property
             string SomeLastName = "adcbgtfsdbcthgybjkli";
             //invoke the method 
-            LastNameOK = AStaff.Valid(SomeLastName);
+            LastNameOK = AStaff.LastNameValid(SomeLastName);
             //test to see if the result is correct 
             Assert.IsTrue(LastNameOK);
         }
@@ -335,7 +335,7 @@ namespace TheTestFrameWork
             //create some test data to assign the property
             string SomeLastName = "asbhytvhnihujkloiyuth";
             //invoke the method 
-            LastNameOK = AStaff.Valid(SomeLastName);
+            LastNameOK = AStaff.LastNameValid(SomeLastName);
             //test to see if the result is correct 
             Assert.IsFalse(LastNameOK);
         }
@@ -350,7 +350,7 @@ namespace TheTestFrameWork
             //create some test data to assign the property
             string SomeLastName = "anhthyhjuk";
             //invoke the method 
-            LastNameOK = AStaff.Valid(SomeLastName);
+            LastNameOK = AStaff.LastNameValid(SomeLastName);
             //test to see if the result is correct 
             Assert.IsTrue(LastNameOK);
         }
@@ -367,7 +367,7 @@ namespace TheTestFrameWork
             //pad the string with characters
             SomeLastName = SomeLastName.PadRight(300, 'a');
             //invoke the method
-            LastNameOK = AStaff.Valid(SomeLastName);
+            LastNameOK = AStaff.LastNameValid(SomeLastName);
             //test to see if that result is correct
             Assert.IsFalse(LastNameOK);
         }
