@@ -112,8 +112,6 @@ namespace TheTestFrameWork
             Assert.IsTrue(LastNameOK);
         }
 
-
-
         [TestMethod]
         public void FirstNameMinLessOne()
         {

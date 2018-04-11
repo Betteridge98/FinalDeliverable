@@ -28,5 +28,24 @@ namespace OurClassLibrary
             }
             return OK;
         }
+
+        public bool LastNameValid(string SomeLastName)
+        {
+            //boolean flag to indicate that all is OK
+            Boolean OK = true;
+            //if first name is blank
+            if (SomeLastName == "")
+            {
+                //flag an error
+                OK = false;
+            }
+            //if the first name is more than 20 characters
+            if (SomeLastName.Length > 20)
+            {
+                //flag an error
+                OK = false;
+            }
+            return OK;
+        }
     }
 }
