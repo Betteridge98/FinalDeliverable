@@ -38,9 +38,9 @@ namespace TheTestFrameWork
             //creating the test data to assign the this property
             Int32 ItemNo = 13;
             //assign the data to the property
-            TheStock.ItemNumber = ItemNo;
+            TheStock.ItemNo = ItemNo;
             //test to see if it exists
-            Assert.AreEqual(TheStock.ItemNumber, ItemNo);
+            Assert.AreEqual(TheStock.ItemNo, ItemNo);
         }
 
         [TestMethod]
@@ -80,19 +80,6 @@ namespace TheTestFrameWork
             TheStock.Condition = SomeCondition;
             //test to see if it exists
             Assert.AreEqual(TheStock.Condition, SomeCondition);
-        }
-
-        [TestMethod]
-        public void InStockPropertyOK()
-        {
-            //create an instance of the property we want to create
-            clsStock TheStock = new clsStock();
-            //creating the test data to assign the this property
-            Boolean SomeStock = true;
-            //assign the data to the property
-            TheStock.InStock = SomeStock;
-            //test to see if it exists
-            Assert.AreEqual(TheStock.InStock, SomeStock);
         }
 
         //

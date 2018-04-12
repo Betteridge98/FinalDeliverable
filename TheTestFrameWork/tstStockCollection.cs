@@ -42,12 +42,11 @@ namespace TheTestFrameWork
             //create the item of test data
             clsStock TestItem = new clsStock();
             //set the properties
-            TestItem.ItemNumber = 1;
+            TestItem.ItemNo = 1;
             TestItem.ItemName = "Overwatch";
             TestItem.Genre = "First Person Shooter";
             TestItem.AgeRating = 13;
             TestItem.Condition = "Good";
-            TestItem.InStock = true;
             //add the item to the test list
             TestStockList.Add(TestItem);
             //assign the data to the property

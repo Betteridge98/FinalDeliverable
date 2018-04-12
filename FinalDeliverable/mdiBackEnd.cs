@@ -118,5 +118,15 @@ namespace FinalDeliverable
             //make the form visible
             StaffList.Visible = true;
         }
+
+        private void stockListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //create an object based on frmStock
+            frmStock AllStock = new frmStock();
+            //make the object a child of the mdi parent
+            AllStock.MdiParent = this;
+            //make the form visible
+            AllStock.Visible = true;
+        }
     }
 }
