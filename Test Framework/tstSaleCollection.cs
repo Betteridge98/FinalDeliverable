@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ClassLibrary;
+using OurClassLibrary;
 using System.Collections.Generic;
 
 namespace Test_Framework

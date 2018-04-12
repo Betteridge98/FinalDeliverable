@@ -58,6 +58,5 @@ C:\Repos\FinalDeliverable\PBBackOffice\bin\Debug\ClassLibrary.dll
 C:\Repos\FinalDeliverable\PBBackOffice\bin\Debug\ClassLibrary.pdb
 C:\Repos\FinalDeliverable\PBBackOffice\obj\Debug\PBBackOffice.csprojResolveAssemblyReference.cache
 C:\Repos\FinalDeliverable\PBBackOffice\obj\Debug\PBBackOffice.frmMain.resources
-C:\Repos\FinalDeliverable\PBBackOffice\obj\Debug\PBBackOffice.mdiBackend.resources
 C:\Repos\FinalDeliverable\PBBackOffice\obj\Debug\PBBackOffice.Properties.Resources.resources
 C:\Repos\FinalDeliverable\PBBackOffice\obj\Debug\PBBackOffice.csproj.GenerateResource.Cache

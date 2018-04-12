@@ -57,9 +57,9 @@
     <Compile Include="tstSaleItem.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+    <ProjectReference Include="..\ClassLibrary\OurClassLibrary.csproj">
       <Project>{88aefdca-7da6-4d97-abeb-6b16b8a16073}</Project>
-      <Name>ClassLibrary</Name>
+      <Name>OurClassLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
