@@ -14,14 +14,16 @@ namespace ClassLibrary
     {
         public clsSaleCollection()
         {
-            //private data member for the list
-            List<clsSaleItem> mSaleItem = new List<clsSaleItem>();
-            //private data member thisSale
-            clsSaleItem mThisSale = new clsSaleItem();
+            ////private data member for the list
+            //List<clsSaleItem> mSaleItem = new List<clsSaleItem>();
+            ////private data member thisSale
+            //clsSaleItem mThisSale = new clsSaleItem();
             //create an instance of the data connection
             clsDataConnection DB = new clsDataConnection();
             //execute the stored procedure to get a list of data
             DB.Execute("sproc_tblSaleItem_SelectAll");
+            //populate the array list with the data table
+            PopulateArray(DB);
             //get the count of records
             Int32 RecordCount = DB.Count;
             //set up the index for the loop
@@ -156,6 +158,73 @@ namespace ClassLibrary
             return DB.Execute("sproc_tblSaleItem_Insert");
         }
 
+        public void Delete()
+        {
+            //deletes the record pointed to by thisSale
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters of the stored procedure
+            DB.AddParameter("@ItemID", mThisSale.ItemID);
+            //execute the stored procedure
+            DB.Execute("sproc_tblSaleItem_Delete");
+        }
 
+        public void Update()
+        {
+            //update an existing record based on the values of thisSale
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored procedure
+            DB.AddParameter("@ItemID", mThisSale.ItemID);
+            DB.AddParameter("@ItemPrice", mThisSale.ItemPrice);
+            DB.AddParameter("@Quantity", mThisSale.Quantity);
+            DB.AddParameter("@SaleID", mThisSale.SaleID);
+            DB.AddParameter("@DateAdded", mThisSale.DateAdded);
+            //execute the  stored procedure
+            DB.Execute("sproc_tblSaleItem_Update");
+
+        }
+
+        public void FilterBySaleID(int SaleID)
+        {
+            //filters the records based on a SaleID
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //send the SaleID parameter to the database
+            DB.AddParameter("@SaleID", SaleID);
+            //execute the stored procedure
+            DB.Execute("sproc_tblSaleItem_FilterBySaleID");
+            //populate the array list with the data table
+            PopulateArray(DB);
+        }
+
+        void PopulateArray (clsDataConnection DB)
+        {
+            //populates the array list based on the data table in the parameter DB
+            //var for thje index
+            Int32 Index = 0;
+            //var to store the record count
+            Int32 RecordCount;
+            //get the count of records
+            RecordCount = DB.Count;
+            //clear the private array list
+            mSaleItems = new List<clsSaleItem>();
+            //while there are records to process
+            while (Index < RecordCount)
+            {
+                //create a blank sale
+                clsSaleItem ASaleItem = new clsSaleItem();
+                //read in the fields from the current record
+                ASaleItem.ItemID = Convert.ToInt32(DB.DataTable.Rows[Index]["ItemID"]);
+                ASaleItem.ItemPrice = Convert.ToDecimal(DB.DataTable.Rows[Index]["ItemPrice"]);
+                ASaleItem.Quantity = Convert.ToInt32(DB.DataTable.Rows[Index]["Quantity"]);
+                ASaleItem.SaleID = Convert.ToInt32(DB.DataTable.Rows[Index]["SaleID"]);
+                ASaleItem.DateAdded = Convert.ToDateTime(DB.DataTable.Rows[Index]["DateAdded"]);
+                //add the record to the private data member
+                mSaleItems.Add(ASaleItem);
+                //point at the next record
+                Index++;
+            }
+        }
     }
 }
