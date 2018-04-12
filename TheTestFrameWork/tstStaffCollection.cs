@@ -75,13 +75,13 @@ namespace TheTestFrameWork
 
         }
 
-        [TestMethod]
-        public void TwoStaffPresent()
-        {
-            //create an instance of the class we want to create
-            clsStaffCollection Staff = new clsStaffCollection();
-            //test to see that the two values are the same
-            Assert.AreEqual(Staff.Count, 2);
-        }
+        //[TestMethod]
+        //public void TwoStaffPresent()
+        //{
+        //    //create an instance of the class we want to create
+        //    clsStaffCollection Staff = new clsStaffCollection();
+        //    //test to see that the two values are the same
+        //    Assert.AreEqual(Staff.Count, 2);
+        //}
     }
 }
