@@ -77,7 +77,7 @@ namespace Test_Framework
             //var to store the primary key
             Int32 PrimaryKey = 1;
             //set its properties
-            TestItem.ItemID = 1;
+            TestItem.ItemID = 3;
             TestItem.ItemPrice = 1.99m;
             TestItem.Quantity = 1;
             TestItem.SaleID = 1;
