@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FinalDeliverable
 {
-    public partial class frmStockList : Form
+    public partial class frmAddPage : Form
     {
-        public frmStockList()
+        public frmAddPage()
         {
             InitializeComponent();
         }
