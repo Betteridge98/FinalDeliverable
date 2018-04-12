@@ -88,6 +88,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\OurClassLibrary\OurClassLibrary.csproj">
       <Project>{836112C4-4952-4013-8664-F87D3E7475B2}</Project>
