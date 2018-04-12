@@ -66,8 +66,10 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="tstSaleCollection.cs" />
     <Compile Include="tstStock.cs" />
     <Compile Include="tstStockCollection.cs" />
+    <Compile Include="tstSaleItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OurClassLibrary\OurClassLibrary.csproj">
