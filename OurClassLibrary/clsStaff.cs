@@ -69,6 +69,13 @@ namespace OurClassLibrary
             }
         }
 
+        public string FullDetails
+        {
+            get
+            {
+                return "First Name:  " + FirstName + "  Last Name:  " + LastName + "  Email:  " + Email + "  Phone No:  " + PhoneNo;
+            }
+        }
         public bool Valid(string SomeFirstName)
         {
             //boolean flag to indicate that all is OK

@@ -26,7 +26,19 @@ namespace FinalDeliverable
 
         private void btnAddStaff_Click(object sender, EventArgs e)
         {
-
+            clsStaffCollection Staff = new clsStaffCollection();
+            clsStaff NewStaff = new clsStaff();
+            //var to store the primary key 
+            Int32 PrimaryKey = 1;
+            NewStaff.StaffNo = Convert.ToInt32(txtStaffNo.Text);
+            NewStaff.FirstName = txtFirstName.Text;
+            NewStaff.LastName = txtLastName.Text;
+            NewStaff.Email = txtEmail.Text;
+            NewStaff.PhoneNo = txtPhoneNo.Text;
+            Staff.ThisStaff = NewStaff;
+            //add the record
+            PrimaryKey = Staff.Add();
+            this.Close();
         }
     }
 }

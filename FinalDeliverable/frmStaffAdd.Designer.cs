@@ -38,6 +38,8 @@
             this.txtPhoneNo = new System.Windows.Forms.TextBox();
             this.btnAddStaff = new System.Windows.Forms.Button();
             this.btnCancelAdd = new System.Windows.Forms.Button();
+            this.lblStaffNo = new System.Windows.Forms.Label();
+            this.txtStaffNo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblFirstName
@@ -106,7 +108,7 @@
             // 
             // btnAddStaff
             // 
-            this.btnAddStaff.Location = new System.Drawing.Point(204, 152);
+            this.btnAddStaff.Location = new System.Drawing.Point(204, 186);
             this.btnAddStaff.Name = "btnAddStaff";
             this.btnAddStaff.Size = new System.Drawing.Size(75, 23);
             this.btnAddStaff.TabIndex = 8;
@@ -116,18 +118,36 @@
             // 
             // btnCancelAdd
             // 
-            this.btnCancelAdd.Location = new System.Drawing.Point(106, 152);
+            this.btnCancelAdd.Location = new System.Drawing.Point(106, 186);
             this.btnCancelAdd.Name = "btnCancelAdd";
             this.btnCancelAdd.Size = new System.Drawing.Size(75, 23);
             this.btnCancelAdd.TabIndex = 9;
             this.btnCancelAdd.Text = "Cancel";
             this.btnCancelAdd.UseVisualStyleBackColor = true;
             // 
+            // lblStaffNo
+            // 
+            this.lblStaffNo.AutoSize = true;
+            this.lblStaffNo.Location = new System.Drawing.Point(15, 155);
+            this.lblStaffNo.Name = "lblStaffNo";
+            this.lblStaffNo.Size = new System.Drawing.Size(46, 13);
+            this.lblStaffNo.TabIndex = 10;
+            this.lblStaffNo.Text = "Staff No";
+            // 
+            // txtStaffNo
+            // 
+            this.txtStaffNo.Location = new System.Drawing.Point(106, 148);
+            this.txtStaffNo.Name = "txtStaffNo";
+            this.txtStaffNo.Size = new System.Drawing.Size(173, 20);
+            this.txtStaffNo.TabIndex = 11;
+            // 
             // frmStaffAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(337, 196);
+            this.ClientSize = new System.Drawing.Size(337, 290);
+            this.Controls.Add(this.txtStaffNo);
+            this.Controls.Add(this.lblStaffNo);
             this.Controls.Add(this.btnCancelAdd);
             this.Controls.Add(this.btnAddStaff);
             this.Controls.Add(this.txtPhoneNo);
@@ -157,5 +177,7 @@
         private System.Windows.Forms.TextBox txtPhoneNo;
         private System.Windows.Forms.Button btnAddStaff;
         private System.Windows.Forms.Button btnCancelAdd;
+        private System.Windows.Forms.Label lblStaffNo;
+        private System.Windows.Forms.TextBox txtStaffNo;
     }
 }

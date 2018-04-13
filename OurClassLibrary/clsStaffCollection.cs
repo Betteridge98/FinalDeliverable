@@ -11,6 +11,7 @@ namespace OurClassLibrary
         private clsDataConnection myDB = new clsDataConnection();
         //private data member for the Staff list
         private List<clsStaff> mStaffList = new List<clsStaff>();
+        private clsStaff mThisStaff;
         //public property for count
         public int Count
         {
@@ -42,6 +43,17 @@ namespace OurClassLibrary
             }
         }
 
+        public clsStaff ThisStaff
+        {
+            get
+            {
+                return mThisStaff;
+            }
+            set
+            {
+                mThisStaff = value;
+            }
+        }
         public void FindAllStaff()
         {
             //re-set the data connection
@@ -76,32 +88,76 @@ namespace OurClassLibrary
         }
 
         //public contstructor for the class
-        public clsStaffCollection()
+        //public clsStaffCollection()
+        //{
+        //    //create an instance of the dataconnection 
+        //    clsDataConnection DB = new clsDataConnection();
+        //    //execute the stored procedure to get the list of data
+        //    DB.Execute("sproc_tblStaff_SelectAll");
+        //    //get the count of records
+        //    Int32 RecordCount = DB.Count;
+        //    //set up the index for the loop
+        //    Int32 Index = 0;
+        //    //while there are records to process
+        //    while (Index < RecordCount)
+        //    {
+        //        //create an instance of the staff class to store a staff member
+        //        clsStaff AStaff = new clsStaff();
+        //        //set the staff member to Sam
+        //        //AStaff.FirstName = DB.DataTable.Rows[Index]["FirstName"].ToString();
+        //        //get the primary key
+        //        AStaff.StaffNo = Convert.ToInt32(DB.DataTable.Rows[Index]["StaffNo"]);
+        //        //add the second county to the private list of staff members
+        //        mStaffList.Add(AStaff);
+        //        //increment the index
+        //        Index++;
+        //    }
+            
+        //    //the private list now contains two staff members
+        //}
+
+        public int Add()
         {
-            //create an instance of the dataconnection 
+            //adds a new record to the database
+            //connect to the database
             clsDataConnection DB = new clsDataConnection();
-            //execute the stored procedure to get the list of data
-            DB.Execute("sproc_tblStaff_SelectAll");
-            //get the count of records
-            Int32 RecordCount = DB.Count;
-            //set up the index for the loop
+            //set the parameters
+            DB.AddParameter("@StaffNo", mThisStaff.StaffNo);
+            DB.AddParameter("@FirstName", mThisStaff.FirstName);
+            DB.AddParameter("@LastName", mThisStaff.LastName);
+            DB.AddParameter("@Email", mThisStaff.Email);
+            DB.AddParameter("@PhoneNo", mThisStaff.PhoneNo);
+            //execute the query
+            return DB.Execute("sproc_tblStaff_Add");
+        }
+
+        void PopulateArray(clsDataConnection DB)
+        {
+            //populates the array list based on the data table in the parameter DB
+            //var for thje index
             Int32 Index = 0;
+            //var to store the record count
+            Int32 RecordCount;
+            //get the count of records
+            RecordCount = DB.Count;
+            //clear the private array list
+            mStaffList = new List<clsStaff>();
             //while there are records to process
             while (Index < RecordCount)
             {
-                //create an instance of the staff class to store a staff member
+                //create a blank sale
                 clsStaff AStaff = new clsStaff();
-                //set the staff member to Sam
-                AStaff.FirstName = DB.DataTable.Rows[Index]["FirstName"].ToString();
-                //get the primary key
+                //read in the fields from the current record
                 AStaff.StaffNo = Convert.ToInt32(DB.DataTable.Rows[Index]["StaffNo"]);
-                //add the second county to the private list of staff members
+                AStaff.FirstName = Convert.ToString(DB.DataTable.Rows[Index]["FirstName"]);
+                AStaff.LastName = Convert.ToString(DB.DataTable.Rows[Index]["LastName"]);
+                AStaff.Email = Convert.ToString(DB.DataTable.Rows[Index]["Email"]);
+                AStaff.PhoneNo= Convert.ToString(DB.DataTable.Rows[Index]["PhoneNo"]);
+                //add the record to the private data member
                 mStaffList.Add(AStaff);
-                //increment the index
+                //point at the next record
                 Index++;
             }
-            
-            //the private list now contains two staff members
         }
     }
 }

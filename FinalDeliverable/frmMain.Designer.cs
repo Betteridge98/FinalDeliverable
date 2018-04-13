@@ -39,7 +39,7 @@
             this.lstStaffList.FormattingEnabled = true;
             this.lstStaffList.Location = new System.Drawing.Point(25, 36);
             this.lstStaffList.Name = "lstStaffList";
-            this.lstStaffList.Size = new System.Drawing.Size(279, 147);
+            this.lstStaffList.Size = new System.Drawing.Size(472, 147);
             this.lstStaffList.TabIndex = 0;
             // 
             // btnPopulate
@@ -63,7 +63,7 @@
             // 
             // btnAddStaffMember
             // 
-            this.btnAddStaffMember.Location = new System.Drawing.Point(334, 36);
+            this.btnAddStaffMember.Location = new System.Drawing.Point(503, 36);
             this.btnAddStaffMember.Name = "btnAddStaffMember";
             this.btnAddStaffMember.Size = new System.Drawing.Size(75, 23);
             this.btnAddStaffMember.TabIndex = 3;
@@ -75,7 +75,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(475, 286);
+            this.ClientSize = new System.Drawing.Size(759, 286);
             this.Controls.Add(this.btnAddStaffMember);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnPopulate);
