@@ -112,6 +112,7 @@
             this.btnAddStaff.TabIndex = 8;
             this.btnAddStaff.Text = "Add Staff";
             this.btnAddStaff.UseVisualStyleBackColor = true;
+            this.btnAddStaff.Click += new System.EventHandler(this.btnAddStaff_Click);
             // 
             // btnCancelAdd
             // 

@@ -13,6 +13,7 @@ namespace FinalDeliverable
 {
     public partial class frmMain : Form
     {
+        clsStaffCollection staffCollection;
         public frmMain()
         {
             InitializeComponent();
@@ -38,6 +39,18 @@ namespace FinalDeliverable
             lstStaffList.ValueMember = "StaffNo";
             //return the count of records in the list
             return MyList.Count;
+
+        }
+
+        private void btnAddStaffMember_Click(object sender, EventArgs e)
+        {
+            //create a new instance of the Staff Add class
+            frmStaffAdd addStaffFrom = new frmStaffAdd(staffCollection, this);
+            addStaffFrom.Show();
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
 
         }
     }
