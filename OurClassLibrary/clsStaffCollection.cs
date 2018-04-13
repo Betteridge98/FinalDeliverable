@@ -11,6 +11,7 @@ namespace OurClassLibrary
         private clsDataConnection myDB = new clsDataConnection();
         //private data member for the Staff list
         private List<clsStaff> mStaffList = new List<clsStaff>();
+        private clsStaff mThisStaff;
         //public property for count
         public int Count
         {
@@ -42,6 +43,17 @@ namespace OurClassLibrary
             }
         }
 
+        public clsStaff ThisStaff
+        {
+            get
+            {
+                return mThisStaff;
+            }
+            set
+            {
+                mThisStaff = value;
+            }
+        }
         public void FindAllStaff()
         {
             //re-set the data connection
@@ -102,6 +114,15 @@ namespace OurClassLibrary
             }
             
             //the private list now contains two staff members
+        }
+
+        public int Add()
+        {
+            //adds a new record to the database
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters
+
         }
     }
 }
