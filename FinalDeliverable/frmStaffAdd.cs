@@ -31,10 +31,10 @@ namespace FinalDeliverable
             //var to store the primary key 
             Int32 PrimaryKey = 1;
             NewStaff.StaffNo = Convert.ToInt32(txtStaffNo.Text);
-            NewStaff.FirstName = Convert.ToString(txtFirstName.Text);
-            NewStaff.LastName = Convert.ToString(txtLastName.Text);
-            NewStaff.Email = Convert.ToString(txtEmail.Text);
-            NewStaff.PhoneNo = Convert.ToString(txtPhoneNo.Text);
+            NewStaff.FirstName = txtFirstName.Text;
+            NewStaff.LastName = txtLastName.Text;
+            NewStaff.Email = txtEmail.Text;
+            NewStaff.PhoneNo = txtPhoneNo.Text;
             Staff.ThisStaff = NewStaff;
             //add the record
             PrimaryKey = Staff.Add();
