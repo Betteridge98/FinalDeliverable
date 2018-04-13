@@ -17,6 +17,8 @@ namespace FinalDeliverable
         public frmSales()
         {
             InitializeComponent();
+
+            //this.saleCollection = saleCollection;
         }
 
         private void btnPopulate_Click(object sender, EventArgs e)
@@ -52,6 +54,56 @@ namespace FinalDeliverable
             frmSalesAdd addSaleForm = new frmSalesAdd(saleCollection, this);
             //show the add sales form
             addSaleForm.Show();
+        }
+
+        //void DeleteSale()
+        //{
+        //    //function to delete the selected record
+
+        //    //create a new instance of the sale collection
+        //    clsSaleCollection SaleCollection = new clsSaleCollection();
+        //    //find the record to delete
+        //    SaleCollection.ThisSale.Find(ItemID);
+
+        //}
+
+        private void btnDeleteSale_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Are you sure you want to remove this sale?", "Are you sure?", MessageBoxButtons.YesNo);
+
+            if (dr == DialogResult.Yes)
+            {
+                //var to store the primary key value of the record to be deleted
+                //Int32 ItemID;
+                
+                //if a record has been selected from the list
+                if (lstSales.SelectedIndex != -1)
+                {
+                    //none of it works
+                    ////create an instance of the class we want to create
+                    //clsSaleCollection Sales = new clsSaleCollection();
+                    ////create the thingey
+                    //clsSaleItem DeletedItem = new clsSaleItem();
+                    ////get the primary key value of the record to delete
+                    //ItemID = Convert.ToInt32(lstSales.SelectedValue);
+                    //////remove the record
+                    ////saleCollection.Delete
+                    //Sales.ThisSale.Find(ItemID);
+                    //Sales.Delete();
+
+                    //clsSaleCollection Sales = new clsSaleCollection();
+                    //clsSaleItem DeletedItem = new clsSaleItem();
+                    //ItemID = Convert.ToInt32(txtDeleteItemID.Text);
+                    //Sales.ThisSale.Find(ItemID);
+                    ////delete the record
+                    //Sales.Delete();
+                    //none of it works
+                }
+            }
+            else if (dr == DialogResult.No)
+            {
+
+            }
         }
     }
 }
