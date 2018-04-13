@@ -139,5 +139,6 @@ namespace FinalDeliverable
             //make the form visible
             AllSales.Visible = true;
         }
+
     }
 }

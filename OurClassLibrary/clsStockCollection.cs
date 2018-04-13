@@ -6,14 +6,15 @@ namespace OurClassLibrary
 {
     public class clsStockCollection
     {
-        //private data member that stores the counts of records found
+        //private data member that stores the count of records found
         private Int32 recordCount;
+        //create a private list data member to store the data from the database
+        private List<clsStock> mAllStock = new List<clsStock>();
+        //private data members for the class
+        private Int32 itemNo;
+        private clsStock mThisStock;
         //private data member to connect to the database
         private clsDataConnection myDB = new clsDataConnection();
-        //private data member for the Staff list
-        private List<clsStock> mStockList = new List<clsStock>();          
-        //creates a private data memeber for the AllStock list
-        private List<clsStock> mAllStock = new List<clsStock>();
         //public property for count
         public int Count
         {
@@ -45,32 +46,32 @@ namespace OurClassLibrary
             }
         }
 
-        //public constructor for the class.
-        public clsStockCollection()
-        {
-            //create an instance of the dataconnection
-            clsDataConnection DB = new clsDataConnection();
-            //execute the stored procedure to get our list of data
-            DB.Execute("sproc_tblStock_SelectAll");
-            //get the count of records
-            Int32 RecordCount = DB.Count;
-            //set up the index for the loop 
-            Int32 Index = 0;
-            //while there are records to process
-            while (Index < RecordCount)
-            {
-                //create a new intance of the stock class
-                clsStock AStock = new clsStock();
-                //get the item name
-                AStock.ItemName = DB.DataTable.Rows[Index]["ItemName"].ToString();
-                //get the primary key
-                AStock.ItemNo = Convert.ToInt32(DB.DataTable.Rows[Index]["ItemNo"]);
-                //add the item the the private data member
-                mAllStock.Add(AStock);
-                //increment the index
-                Index++;
-            }
-        }
+        ////public constructor for the class.
+        //public clsStockCollection()
+        //{
+        //    //create an instance of the dataconnection
+        //    clsDataConnection DB = new clsDataConnection();
+        //    //execute the stored procedure to get our list of data
+        //    DB.Execute("sproc_tblStock_SelectAll");
+        //    //get the count of records
+        //    Int32 RecordCount = DB.Count;
+        //    //set up the index for the loop 
+        //    Int32 Index = 0;
+        //    //while there are records to process
+        //    while (Index < RecordCount)
+        //    {
+        //        //create a new intance of the stock class
+        //        clsStock AStock = new clsStock();
+        //        //get the item name
+        //        AStock.ItemName = DB.DataTable.Rows[Index]["ItemName"].ToString();
+        //        //get the primary key
+        //        AStock.ItemNo = Convert.ToInt32(DB.DataTable.Rows[Index]["ItemNo"]);
+        //        //add the item the the private data member
+        //        mAllStock.Add(AStock);
+        //        //increment the index
+        //        Index++;
+        //    }
+        //}
 
         public void FindAllStock()
         {
@@ -98,11 +99,40 @@ namespace OurClassLibrary
                 if (StockFound == true)
                 {
                     //add the stock to the list
-                    mStockList.Add(NewStock);
+                    mAllStock.Add(NewStock);
                 }
                 //increment the index
                 Index++;
             }
+        }
+
+
+        public clsStock ThisStock
+        {
+            get
+            {
+                return mThisStock;
+            }
+            set
+            {
+                mThisStock = value;
+            }
+        }
+
+    
+        public int Add()
+        {
+            //adds a new record to the database based on the values of mThisSale
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored procedure
+            DB.AddParameter("@ItemNo", mThisStock.ItemNo);
+            DB.AddParameter("@ItemName", mThisStock.ItemName);
+            DB.AddParameter("@AgeRating", mThisStock.AgeRating);
+            DB.AddParameter("@Genre", mThisStock.Genre);
+            DB.AddParameter("@Condition", mThisStock.Condition);
+            //execute the query returning the primary key value
+            return DB.Execute("sproc_tblStock_Insert");
         }
 
 

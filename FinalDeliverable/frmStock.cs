@@ -13,6 +13,7 @@ namespace FinalDeliverable
 {
     public partial class frmStock : Form
     {
+        clsStockCollection stockCollection;
         public frmStock()
         {
             InitializeComponent();
@@ -27,7 +28,7 @@ namespace FinalDeliverable
             //set the data source of the list box
             lstStockList.DataSource = MyList.AllStock;
             //set the text to be displayed
-            lstStockList.DisplayMember = "ItemName";
+            lstStockList.DisplayMember = "AllDetails";
             //set the primary key value
             lstStockList.ValueMember = "ItemNo";
             //return the count of records in the list
@@ -39,6 +40,13 @@ namespace FinalDeliverable
         {
             //call the display staff function
             lblError.Text = DisplayStock() + " found";
+        }
+
+        private void btnAddPage_Click(object sender, EventArgs e)
+        {
+            //create a new instance of the stockk add class
+            frmStockAdd addStockFrom = new frmStockAdd(stockCollection, this);
+            addStockFrom.Show();
         }
     }
 }
