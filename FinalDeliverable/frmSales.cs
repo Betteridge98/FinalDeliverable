@@ -13,6 +13,7 @@ namespace FinalDeliverable
 {
     public partial class frmSales : Form
     {
+        clsSaleCollection saleCollection;
         public frmSales()
         {
             InitializeComponent();
@@ -43,6 +44,14 @@ namespace FinalDeliverable
         private void frmSales_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAddSale_Click(object sender, EventArgs e)
+        {
+            //create a new instance of the frmSalesAdd class
+            frmSalesAdd addSaleForm = new frmSalesAdd(saleCollection, this);
+            //show the add sales form
+            addSaleForm.Show();
         }
     }
 }
