@@ -122,7 +122,13 @@ namespace OurClassLibrary
             //connect to the database
             clsDataConnection DB = new clsDataConnection();
             //set the parameters
-
+            DB.AddParameter("@StaffNo", mThisStaff.StaffNo);
+            DB.AddParameter("@FirstName", mThisStaff.FirstName);
+            DB.AddParameter("@LastName", mThisStaff.LastName);
+            DB.AddParameter("@Email", mThisStaff.Email);
+            DB.AddParameter("@PhoneNo", mThisStaff.PhoneNo);
+            //execute the query
+            return DB.Execute("sproc_tblStaff_Add");
         }
     }
 }
