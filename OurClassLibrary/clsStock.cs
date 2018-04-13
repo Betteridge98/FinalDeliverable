@@ -69,6 +69,14 @@ namespace OurClassLibrary
             }
         }
 
+        public string AllDetails
+        {
+            get
+            {
+                return "ItemName:  " + ItemName + "  AgeRating:  " + AgeRating + "  Genre:  " + Genre + "  Condition:  " + Condition;
+            }
+        
+        }
         public bool Valid(string SomeItemName)
         {
             //boolean flag to indicate that all is OK

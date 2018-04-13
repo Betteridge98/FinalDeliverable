@@ -448,7 +448,7 @@
             // manageToolStripMenuItem
             // 
             this.manageToolStripMenuItem.Name = "manageToolStripMenuItem";
-            this.manageToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.manageToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.manageToolStripMenuItem.Text = "Manage";
             this.manageToolStripMenuItem.Click += new System.EventHandler(this.manageToolStripMenuItem_Click);
             // 
@@ -463,7 +463,7 @@
             // stockListToolStripMenuItem
             // 
             this.stockListToolStripMenuItem.Name = "stockListToolStripMenuItem";
-            this.stockListToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.stockListToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.stockListToolStripMenuItem.Text = "Stock List";
             this.stockListToolStripMenuItem.Click += new System.EventHandler(this.stockListToolStripMenuItem_Click);
             // 
@@ -478,7 +478,7 @@
             // salesListToolStripMenuItem
             // 
             this.salesListToolStripMenuItem.Name = "salesListToolStripMenuItem";
-            this.salesListToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.salesListToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.salesListToolStripMenuItem.Text = "&Manage";
             this.salesListToolStripMenuItem.Click += new System.EventHandler(this.manageToolStripMenuItem1_Click);
             // 
