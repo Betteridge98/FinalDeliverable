@@ -23,7 +23,7 @@ namespace OurClassLibrary
             //execute the stored procedure to get a list of data
             DB.Execute("sproc_tblSaleItem_SelectAll");
             //populate the array list with the data table
-            PopulateArray(DB);
+            //PopulateArray(DB);
             //get the count of records
             Int32 RecordCount = DB.Count;
             //set up the index for the loop
@@ -116,9 +116,9 @@ namespace OurClassLibrary
             myDB = new clsDataConnection();
             //var to store the index
             Int32 Index = 0;
-            //var to store the user number of the current record
+            //var to store the sale number of the current record
             Int32 ItemID;
-            //var to flag that user was found
+            //var to flag that sale was found
             Boolean SaleItemFound;
             //execute the stored procedure
             myDB.Execute("sproc_tblSaleItem_SelectAll");
@@ -127,15 +127,15 @@ namespace OurClassLibrary
             //while there are still records to process
             while (Index < myDB.Count)
             {
-                //create an instance of the user class
+                //create an instance of the sale class
                 clsSaleItem NewSaleItem = new clsSaleItem();
-                //get the user number from the database
+                //get the ItemID from the database
                 ItemID = Convert.ToInt32(myDB.DataTable.Rows[Index]["ItemID"]);
-                //find the user by invoking the find method
+                //find the sale by invoking the find method
                 SaleItemFound = NewSaleItem.Find(ItemID);
                 if (SaleItemFound == true)
                 {
-                    //add the user to the list
+                    //add the sale to the list
                     mSaleItems.Add(NewSaleItem);
                 }
                 //increment the index

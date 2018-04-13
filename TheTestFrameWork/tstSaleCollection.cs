@@ -170,9 +170,11 @@ namespace Test_Framework
             //create an instance of the filtered data
             clsSaleCollection FilteredSales = new clsSaleCollection();
             //apply a blank string (should return all records)
-            FilteredSales.FilterBySaleID(Convert.ToInt32(null));
+            //FilteredSales.FilterBySaleID(Convert.ToInt32(null));
+            FilteredSales.FilterBySaleID(1);
             //test to see that the two values are the same
             Assert.AreEqual(Sales.Count, FilteredSales.Count);
+            
         }
 
         [TestMethod]
