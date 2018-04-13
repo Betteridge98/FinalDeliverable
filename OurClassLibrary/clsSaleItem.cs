@@ -79,6 +79,24 @@ namespace OurClassLibrary
             }
         }
 
+        public string FullDetails
+        {
+            get
+            {
+                return "Item ID: " + ItemID + " Price: " + ItemPrice + " Quantity: " + Quantity + " Sale ID: " + SaleID + " Date Added: " + DateAdded.ToString("dd/MM/yyyy");
+
+            }
+        }
+
+        //public FullDetails2(int itemID, decimal itemPrice, int quantity, int saleID, DateTime dateAdded)
+        //{
+        //    ItemID = itemID;
+        //    ItemPrice = itemPrice;
+        //    Quantity = quantity;
+        //    SaleID = saleID;
+        //    DateAdded = dateAdded;
+        //}
+
         ///public find method
         public Boolean Find(Int32 ItemID)
         {

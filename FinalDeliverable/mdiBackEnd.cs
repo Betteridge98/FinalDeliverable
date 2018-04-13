@@ -128,5 +128,15 @@ namespace FinalDeliverable
             //make the form visible
             AllStock.Visible = true;
         }
+
+        private void manageToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            //create an object based on frmSales
+            frmSales AllSales = new frmSales();
+            //make the object a child of the mdi parent
+            AllSales.MdiParent = this;
+            //make the form visible
+            AllSales.Visible = true;
+        }
     }
 }
