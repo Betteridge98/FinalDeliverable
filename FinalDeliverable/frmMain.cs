@@ -34,7 +34,7 @@ namespace FinalDeliverable
             //set the data source of the list box
             lstStaffList.DataSource = MyList.StaffList;
             //set the text to be displayed
-            lstStaffList.DisplayMember = "FirstName";
+            lstStaffList.DisplayMember = "FullDetails";
             //set the primary key value
             lstStaffList.ValueMember = "StaffNo";
             //return the count of records in the list
