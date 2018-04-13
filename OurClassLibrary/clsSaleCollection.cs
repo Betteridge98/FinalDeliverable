@@ -12,35 +12,36 @@ namespace OurClassLibrary
 
     public class clsSaleCollection
     {
-        public clsSaleCollection()
-        {
-            ////private data member for the list
-            //List<clsSaleItem> mSaleItem = new List<clsSaleItem>();
-            ////private data member thisSale
-            //clsSaleItem mThisSale = new clsSaleItem();
-            //create an instance of the data connection
-            clsDataConnection DB = new clsDataConnection();
-            //execute the stored procedure to get a list of data
-            DB.Execute("sproc_tblSaleItem_SelectAll");
-            //populate the array list with the data table
-            //PopulateArray(DB);
-            //get the count of records
-            Int32 RecordCount = DB.Count;
-            //set up the index for the loop
-            Int32 Index = 0;
-            //while there are records to process
-            while (Index < RecordCount)
-            {
-                //create a new instance of the saleitem class
-                clsSaleItem SaleItem = new clsSaleItem();
-                //get the saleitem ItemID
-                SaleItem.ItemID = Convert.ToInt32(DB.DataTable.Rows[Index]["ItemID"]);
-                //add the saleitem to the private data member
-                mSaleItems.Add(SaleItem);
-                //increment the index
-                Index++;
-            }
-        }
+        //not needed anymore
+        //public clsSaleCollection()
+        //{
+        //    ////private data member for the list
+        //    //List<clsSaleItem> mSaleItem = new List<clsSaleItem>();
+        //    ////private data member thisSale
+        //    //clsSaleItem mThisSale = new clsSaleItem();
+        //    //create an instance of the data connection
+        //    clsDataConnection DB = new clsDataConnection();
+        //    //execute the stored procedure to get a list of data
+        //    DB.Execute("sproc_tblSaleItem_SelectAll");
+        //    //populate the array list with the data table
+        //    //PopulateArray(DB);
+        //    //get the count of records
+        //    Int32 RecordCount = DB.Count;
+        //    //set up the index for the loop
+        //    Int32 Index = 0;
+        //    //while there are records to process
+        //    while (Index < RecordCount)
+        //    {
+        //        //create a new instance of the saleitem class
+        //        clsSaleItem SaleItem = new clsSaleItem();
+        //        //get the saleitem ItemID
+        //        SaleItem.ItemID = Convert.ToInt32(DB.DataTable.Rows[Index]["ItemID"]);
+        //        //add the saleitem to the private data member
+        //        mSaleItems.Add(SaleItem);
+        //        //increment the index
+        //        Index++;
+        //    }
+        //}
         //private data member that stores the count of records found
         private Int32 recordCount;
         //create a private list data member to store the data from the database

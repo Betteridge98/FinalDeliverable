@@ -102,7 +102,7 @@ namespace Test_Framework
             //create the item of test data
             clsSaleItem TestItem = new clsSaleItem();
             //var to store the primary key
-            Int32 PrimaryKey = 4;
+            Int32 PrimaryKey = 1;
             //set its properties
             TestItem.ItemID = 4;
             TestItem.ItemPrice = 1.99m;
