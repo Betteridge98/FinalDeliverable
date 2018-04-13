@@ -66,13 +66,13 @@ namespace OurClassLibrary
             }
         }
 
-        //public list of users
+        //public list of sale items
         public List<clsSaleItem> SaleItems
         {
             //getter sends data to requesting code
             get
             {
-                //return the list of users
+                //return the list of sale items
                 return mSaleItems;
             }
             //setter accepts data from other objects
