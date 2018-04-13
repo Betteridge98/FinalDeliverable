@@ -52,6 +52,7 @@ namespace FinalDeliverable
             Sales.ThisSale = AddedItem;
             //add the record
             PrimaryKey = Sales.Add();
+            formSales.DisplaySaleItems();
             this.Close();
         }
     }

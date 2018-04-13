@@ -27,7 +27,7 @@ namespace FinalDeliverable
             lblError.Text = DisplaySaleItems() + " found";
         }
 
-        Int32 DisplaySaleItems()
+        public Int32 DisplaySaleItems()
         {
             //create an instance of the sale collection
             clsSaleCollection MySales = new clsSaleCollection();
